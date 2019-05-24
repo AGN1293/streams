@@ -1,0 +1,15 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{ISO8601} %-5level [%logger{36}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.minsait.streams" level="${LOG_LEVEL:-debug}" />
+
+    <root level="${ROOT_LOG_LEVEL:-info}">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

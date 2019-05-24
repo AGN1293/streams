@@ -1,12 +1,9 @@
 package org.minsait.streams
 
-import org.apache.kafka.common.serialization.Serdes
-import org.apache.kafka.streams.kstream.Produced
+
 import org.apache.kafka.streams.{KeyValue, StreamsBuilder}
 import org.minsait.streams.Transformation.{formatEvents, jsonToClass}
 import org.minsait.streams.model.JsonMessage
-
-import scala.collection.mutable.ArrayBuffer
 
 class MainTopology {
 
@@ -20,12 +17,14 @@ class MainTopology {
   }
 
   private val toJsonEvent = (key: String, value: String) => {
+    println(value)
     val jsonEventsAsCaseClasses = jsonToClass(value)
     new KeyValue(key, jsonEventsAsCaseClasses)
   }
 
   private val toFormattedEvents = (key: String, value: Option[JsonMessage]) => {
     val jsonEvents = formatEvents(value)
+    println(jsonEvents)
     new KeyValue(key, jsonEvents)
   }
 

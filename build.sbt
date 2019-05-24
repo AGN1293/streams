@@ -15,6 +15,8 @@ libraryDependencies ++= {
     "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2" % "compile" withSources(),
     "org.typelevel" %% "cats-core" % "1.5.0" % "compile" withSources(),
     "org.typelevel" %% "cats-effect" % "0.5" % "compile" withSources(),
+    "ch.qos.logback" % "logback-classic" % "1.2.3" % "compile" withSources(),
+    "org.slf4j" % "log4j-over-slf4j" % "1.7.25" % "compile",
 
     "org.scalatest" %% "scalatest" % "3.0.5" % "test" withSources(),
     "org.apache.kafka" % "kafka-streams-test-utils" % "2.2.0" % Test
