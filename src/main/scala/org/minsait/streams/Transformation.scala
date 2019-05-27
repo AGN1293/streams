@@ -48,7 +48,9 @@ object Transformation {
                       results += ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 3, y.Label, y.TextBoxField.get.Value.get)
                     }
                   case 4 =>
-                    results += ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 4, y.Label, y.DatetimeFieldId.get.Value.get)
+                    if (y.DatetimeFieldId.isDefined && y.DatetimeFieldId.get.Value.isDefined) {
+                      results += ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 4, y.Label, y.DatetimeFieldId.get.Value.get)
+                    }
                   case 5 =>
                     if (y.IsFilled.getOrElse(false) && y.LogicFieldId.isDefined) {
                       if (y.LogicFieldId.get.Value.getOrElse(false))
