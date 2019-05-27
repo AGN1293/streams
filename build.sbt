@@ -2,8 +2,6 @@ name := "kafka-streams_OSUSR_DGL_DFORM_I1"
 
 version := "0.1"
 
-scalaVersion := "2.12.8"
-
 libraryDependencies ++= {
   val circeVersion = "0.12.0-M1"
   Seq(

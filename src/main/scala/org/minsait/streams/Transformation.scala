@@ -16,7 +16,8 @@ object Transformation {
   val printer: Printer = Printer.noSpaces.copy(dropNullValues = true)
 
   def jsonToClass(input: String): Option[JsonMessage] = {
-    val decoded = decode[JsonMessage](input)
+    val inputFormatted = input.replace("\"[", "[").replace("]\"", "]").replace("\\", "")
+    val decoded = decode[JsonMessage](inputFormatted)
     decoded match {
       case Right(msg) => Some(msg)
       case Left(_) => {
@@ -30,6 +31,7 @@ object Transformation {
     var results: ArrayBuffer[ResponseMessage] = ArrayBuffer.empty
     json match {
       case Some(msg) => {
+        logger.debug(s"[OSUSR_DGL_DFORM_I1] Parsing message with id: {${json.get.after.ID}}")
         val id = msg.after.ID
         val tenantId = msg.after.TENANT_ID
         var xIndex = -1
@@ -69,7 +71,7 @@ object Transformation {
                     if (y.NumericFieldId.isDefined && y.NumericFieldId.get.Value.isDefined)
                       results += ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 7, y.Label, y.NumericFieldId.get.Value.get.toString)
                   case 8 =>
-                    if (y.AttachmentFieldId.isDefined && y.AttachmentFieldId.get.AttachmentLines.isDefined && y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.isDefined) {
+                    if (y.AttachmentFieldId.isDefined && y.AttachmentFieldId.get.AttachmentLines.isDefined && y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.isDefined && y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.get.nonEmpty) {
                       val value = y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.get.head.Value.getOrElse("")
                       val fileName = y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.get.head.FileName.get
                       results += ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 8, y.Label, value, Some(fileName))
