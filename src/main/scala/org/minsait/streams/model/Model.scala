@@ -21,6 +21,7 @@ case class Fields(
                    Guid: String,
                    IsMandatory: Option[Boolean],
                    IsFilled: Option[Boolean],
+                   HelpText: Option[String],
                    Label: String,
                    Order: Int,
                    BusinessConceptId: Option[Int],
@@ -29,7 +30,9 @@ case class Fields(
                    LogicFieldId: Option[LogicFieldId],
                    OptionListFieldId: Option[OptionListFieldId],
                    DatetimeFieldId: Option[DatetimeFieldId],
-                   AttachmentFieldId: Option[AttachmentFieldId])
+                   AttachmentFieldId: Option[AttachmentFieldId],
+                   LabelFieldId: Option[LabelField],
+                   WeightField: Option[String])
 
 case class TextBoxField(
                          HasMultiLine: Option[Boolean],
@@ -81,6 +84,10 @@ case class AttachmentLineField(
                               Value: Option[String],
                               FileName: Option[String]
                               )
+
+case class LabelField(
+                     HasMultiLine: Option[Boolean]
+                     )
 
 case class ResponseMessage(
                      ID: Int,

@@ -4,8 +4,11 @@ package org.minsait.streams
 import org.apache.kafka.streams.{KeyValue, StreamsBuilder}
 import org.minsait.streams.Transformation.{formatEvents, jsonToClass}
 import org.minsait.streams.model.JsonMessage
+import org.slf4j.LoggerFactory
 
 class MainTopology {
+
+  val logger = LoggerFactory.getLogger(getClass)
 
   val createTopology = (sourceTopic: String, sinkTopic: String) => {
     val builder = new StreamsBuilder()
@@ -17,14 +20,13 @@ class MainTopology {
   }
 
   private val toJsonEvent = (key: String, value: String) => {
-    println(value)
     val jsonEventsAsCaseClasses = jsonToClass(value)
     new KeyValue(key, jsonEventsAsCaseClasses)
   }
 
   private val toFormattedEvents = (key: String, value: Option[JsonMessage]) => {
     val jsonEvents = formatEvents(value)
-    println(jsonEvents)
+    logger.debug(s"[KAFKA STREAMS] Writing $value message")
     new KeyValue(key, jsonEvents)
   }
 
