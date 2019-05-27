@@ -15,7 +15,7 @@ class MainSpec extends FlatSpec with Matchers with TestSpec {
     implicit val driver = new TopologyTestDriver(mainTopology.createTopology("input-topic", "output-topic"), config)
     val recordFactory = new ConsumerRecordFactory("input-topic", new StringSerializer(), new StringSerializer())
     val words = IO {
-      Source.fromInputStream(getClass.getClassLoader.getResourceAsStream("input2.json")).getLines().mkString
+      Source.fromInputStream(getClass.getClassLoader.getResourceAsStream("input.json")).getLines().mkString
     }.unsafeRunSync()
     val expected = IO {
       Source.fromInputStream(getClass.getClassLoader.getResourceAsStream("response.json")).getLines().mkString
