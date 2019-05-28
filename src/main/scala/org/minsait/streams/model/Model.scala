@@ -9,8 +9,7 @@ case class JsonMessage(table: String,
 
 case class After(TENANT_ID: Int,
                  ID: Int,
-                 FORMINSTANCEFIELDS: Option[List[InstanceFields]],
-                 FORMINSTANCEWEIGHTINGS: Option[Seq[String]])
+                 FORMINSTANCEFIELDS: Option[List[InstanceFields]])
 
 case class InstanceFields(Name: String,
                           Guid: String,
