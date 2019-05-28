@@ -4,6 +4,8 @@ version := "0.1"
 
 test in assembly := {}
 
+scalaVersion := "2.12.0"
+
 libraryDependencies ++= {
   val circeVersion = "0.12.0-M1"
   Seq(
@@ -12,10 +14,13 @@ libraryDependencies ++= {
     "io.circe" %% "circe-parser" % circeVersion % "compile" withSources(),
     "io.circe" %% "circe-core" % circeVersion % "compile" withSources(),
     "io.circe" %% "circe-generic" % circeVersion % "compile" withSources(),
+    "io.circe" %% "circe-generic-extras" % circeVersion % "compile" withSources(),
     "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2" % "compile" withSources(),
     "org.typelevel" %% "cats-core" % "1.5.0" % "compile" withSources(),
     "org.typelevel" %% "cats-effect" % "0.5" % "compile" withSources(),
     "ch.qos.logback" % "logback-classic" % "1.2.3" % "compile" withSources(),
+    "org.scala-sbt" % "util-interface" % "1.2.2" % Compile withSources(),
+    "org.scala-sbt" %% "compiler-bridge" % "1.2.5" % Compile withSources(),
     "org.slf4j" % "log4j-over-slf4j" % "1.7.25" % "compile",
 
     "org.scalatest" %% "scalatest" % "3.0.5" % "test" withSources(),

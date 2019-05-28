@@ -15,26 +15,28 @@ case class After(TENANT_ID: Int,
 case class InstanceFields(Name: String,
                           Guid: String,
                           FieldsList: List[Fields],
-                          Order: Option[Int])
+                          Order: Option[Int],
+                          IsFork: Option[Boolean],
+                          ParentId: Option[String],
+                          ParentGuid: Option[String],
+                          ForkOrder: Option[Int])
 
 case class Fields(
                    DFormFieldTypeId: Int,
                    Guid: String,
                    IsMandatory: Option[Boolean],
                    IsFilled: Option[Boolean],
+                   IsHidden: Option[Boolean],
                    Label: String,
                    Order: Int,
-                   HelpText: Option[String],
                    BusinessConceptId: Option[Int],
                    TextBoxField: Option[TextBoxField],
                    NumericFieldId: Option[NumericFieldId],
                    LogicFieldId: Option[LogicFieldId],
                    OptionListFieldId: Option[OptionListFieldId],
-                   TableRecordLines: Option[Seq[String]],
                    DatetimeFieldId: Option[DatetimeFieldId],
                    AttachmentFieldId: Option[AttachmentFieldId],
-                   LabelFieldId: Option[LabelFieldId],
-                   WeightField: Option[Weight])
+                   LabelFieldId: Option[LabelFieldId])
 
 case class Weight()
 
@@ -47,13 +49,17 @@ case class TextBoxField(
 
 case class NumericFieldId(
                            Value: Option[Int],
-                           MaxVaule: Option[Long]
+                           MaxValue: Option[Long],
+                           MinValue: Option[Long]
                          )
 
 case class LogicFieldId(
                          Value: Option[Boolean],
                          LabelTrue: Option[String],
-                         LabelFalse: Option[String]
+                         LabelFalse: Option[String],
+                         TrueIsFork: Option[Boolean],
+                         TrueForkGuid: Option[String],
+                         TrueForkId: Option[String]
                        )
 
 case class OptionListFieldId(
@@ -66,7 +72,8 @@ case class OptionChoices(
                           Guid: Option[String],
                           Order: Option[Int],
                           IsSelected: Option[Boolean],
-                          Value: Option[String]
+                          Value: Option[String],
+                          ForkGuid: Option[String]
                         )
 
 case class DatetimeFieldId(

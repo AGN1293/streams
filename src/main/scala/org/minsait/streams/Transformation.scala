@@ -1,6 +1,7 @@
 package org.minsait.streams
 
 import io.circe.Printer
+import io.circe.generic.extras.Configuration
 import org.minsait.streams.model.{JsonMessage, ResponseMessage}
 import io.circe.parser.decode
 import org.slf4j.LoggerFactory
@@ -13,14 +14,17 @@ object Transformation {
 
   val logger = LoggerFactory.getLogger(getClass)
 
+  implicit val configuration: Configuration = Configuration.default.withDefaults
+
   val printer: Printer = Printer.noSpaces.copy(dropNullValues = true)
 
   def jsonToClass(input: String): Option[JsonMessage] = {
-    val inputFormatted = input.replace("\"[", "[").replace("]\"", "]").replace("\\", "")
+    val inputFormatted = input.replace("\\\\\\\"", "").replace("\"[", "[").replace("]\"", "]").replace("\\", "")
     val decoded = decode[JsonMessage](inputFormatted)
     decoded match {
       case Right(msg) => Some(msg)
-      case Left(_) => {
+      case Left(error) => {
+        logger.debug(s"[OSUSR_DGL_DFORM_I1] Error parsing the json message: $error")
         logger.debug(s"[OSUSR_DGL_DFORM_I1] Couldn't parse the message: $inputFormatted")
         None
       }
