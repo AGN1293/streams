@@ -1,1 +1,1302 @@
-{"table":"MYSCHEMATOPIC.POPS-P-OSUSR_DGL_DFORM_I1-J","op_type":"I","op_ts":"2019-05-20 10:00:59.002168","current_ts":"2019-05-20T10:01:06.777000","pos":"00000000370059185967","after":{"TENANT_ID":83,"ID":242953,"FORMINSTANCEFIELDS":[],"FORMINSTANCEWEIGHTINGS":" "}}
+{
+  "table": "MYSCHEMATOPIC.POPS-P-OSUSR_DGL_DFORM_I1-J",
+  "op_type": "U",
+  "op_ts": "2019-05-20 10:44:21.003710",
+  "current_ts": "2019-05-20T10:44:27.248000",
+  "pos": "00000000370063949629",
+  "before": {
+    "TENANT_ID": 83,
+    "ID": 243170
+  },
+  "after": {
+    "TENANT_ID": 83,
+    "ID": 243170,
+    "FORMINSTANCEFIELDS": [
+      {
+        "Name": "¿CUÁNDO Y DÓNDE?",
+        "Guid": "757ede2a-664b-41d6-a8d5-c835490ec85e",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 4,
+            "Guid": "ff58853f-1c9a-4fbe-ad1c-bee948ba3e53",
+            "IsMandatory": true,
+            "Label": "¿Cuándo ha ocurrido?",
+            "Order": 1,
+            "BusinessConceptId": 4,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": true,
+              "IsDate": false,
+              "Value": "2019-05-20T07:25:00Z",
+              "IsToday": true
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "b51f33af-b80d-4f31-8e0a-847ee3e62ec6",
+            "IsMandatory": true,
+            "Label": "¿Dónde ha ocurrido?",
+            "Order": 2,
+            "BusinessConceptId": 5,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Accediendo",
+                  "Value": ""
+                },
+                {
+                  "Name": "Aparcamiento",
+                  "Value": ""
+                },
+                {
+                  "Name": "Línea de cajas",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Sala de ventas",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          }
+        ]
+      },
+      {
+        "Name": "¿QUIÉN Y QUÉ'?",
+        "Guid": "8818737d-6195-42fc-a60c-c1b5d27e0cec",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "2e590d36-cc15-4f99-b226-1a9b629be628",
+            "IsMandatory": false,
+            "Label": "¿Quién ha sido afectado?",
+            "Order": 1,
+            "BusinessConceptId": 30,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Vigilante",
+                  "Value": "",
+                  "IsDefault": true
+                },
+                {
+                  "Name": "Tienda",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "El Jefe",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "798558c4-2fe0-4e31-87c8-576bc636a402",
+            "IsMandatory": false,
+            "Label": "¿Quíén lo ha detectado?",
+            "Order": 12,
+            "BusinessConceptId": 34,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Vigilante",
+                  "Value": "",
+                  "IsDefault": true,
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Tienda",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 5,
+            "Guid": "d14aef52-9d63-4633-a46c-4a3285c1e1aa",
+            "IsMandatory": false,
+            "Label": "¿Actitud sospechosa?",
+            "Order": 15,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {
+              "LabelTrue": "Sí",
+              "LabelFalse": "No"
+            },
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "cda44e66-0f2c-4e09-81b4-f783f2c8ffb2",
+            "IsMandatory": false,
+            "Label": "Número de autores",
+            "Order": 3,
+            "BusinessConceptId": 51,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "1 persona",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "2 personas",
+                  "Value": ""
+                },
+                {
+                  "Name": "Más de 2 personas",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "9957a7d0-2d91-40ed-a72a-5dde5b7d0bbe",
+            "IsMandatory": false,
+            "Label": "Edad ",
+            "Order": 4,
+            "BusinessConceptId": 11,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Mayor de edad",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Menor de edad",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "fa972731-139f-4cb9-bc06-2c4b735ff231",
+            "IsMandatory": false,
+            "Label": "Sexo",
+            "Order": 5,
+            "BusinessConceptId": 9,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Hombre",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Mujer",
+                  "Value": ""
+                },
+                {
+                  "Name": "Ambos",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "12e4609a-7524-4e10-a3b9-5413b35d9da9",
+            "IsMandatory": false,
+            "Label": "¿ Ha existido  agresión ?",
+            "Order": 13,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "No aplica",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Insulto",
+                  "Value": "",
+                  "Guid": "7daeac41-10e0-4629-a5c9-ec49d92aebc9",
+                  "Order": 1
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "df80c540-d5b6-4141-9c65-8135741cf112",
+            "IsMandatory": false,
+            "Label": "¿Qué ha sustraido?",
+            "Order": 6,
+            "BusinessConceptId": 40,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Bienes de Mercadona",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Bienes y efectos personales",
+                  "Value": ""
+                },
+                {
+                  "Name": "Dinero/Cartera/Bolso",
+                  "Value": ""
+                },
+                {
+                  "Name": "Material de trabajo",
+                  "Value": ""
+                },
+                {
+                  "Name": "Vehículo",
+                  "Value": ""
+                },
+                {
+                  "Name": "Nada, abandona los productos",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 10,
+            "Guid": "20104cd1-f3d5-4af9-be16-cc746b86ceff",
+            "IsMandatory": false,
+            "Label": "QUÉ BIENES / PRODUCTOS DE MERCADONA",
+            "Order": 7,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 7,
+            "Guid": "c01b7716-0e00-4c12-95ba-48f505841f71",
+            "IsMandatory": false,
+            "Label": "Nº de Productos",
+            "Order": 8,
+            "IsFilled": true,
+            "BusinessConceptId": 41,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {
+              "Value": 12,
+              "MaxValue": 9999
+            },
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "962bf30c-d579-49c7-b2c6-006abded2404",
+            "IsMandatory": false,
+            "Label": "Sección a la que pertenecen los productos",
+            "Order": 9,
+            "BusinessConceptId": 15,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Bodega",
+                  "Value": ""
+                },
+                {
+                  "Name": "Carnicería",
+                  "Value": ""
+                },
+                {
+                  "Name": "Charcutería",
+                  "Value": ""
+                },
+                {
+                  "Name": "Conservas",
+                  "Value": ""
+                },
+                {
+                  "Name": "Frutería",
+                  "Value": ""
+                },
+                {
+                  "Name": "Horno",
+                  "Value": ""
+                },
+                {
+                  "Name": "Perfumería",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Pescadería",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 3,
+            "Guid": "e36e06a6-d494-431d-9c6a-55a1df367fe5",
+            "IsMandatory": false,
+            "Label": "Descripción de los productos.",
+            "Order": 10,
+            "IsFilled": true,
+            "TextBoxField": {
+              "HasMultiline": true,
+              "MaxLength": 400,
+              "Prompt": "Recuerda que puedes dictar mediante el micrófono del teclado.",
+              "Value": "Perfume Agua de Sevilla Masculino. "
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 7,
+            "Guid": "fe871043-57df-49c9-9e61-1e4c01fb0a54",
+            "IsMandatory": false,
+            "Label": "¿Qué Importe?",
+            "Order": 11,
+            "IsFilled": true,
+            "BusinessConceptId": 1,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {
+              "NumberOfDecimals": 2,
+              "Value": 18.95,
+              "MaxValue": 9999
+            },
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          }
+        ]
+      },
+      {
+        "Name": "¿CÓMO?",
+        "Guid": "83631404-9009-4710-b855-e97a72e43cfd",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "2bc43fc2-cccf-4676-957d-d4dd7b61ecd7",
+            "IsMandatory": false,
+            "Label": "Modus Operandi",
+            "Order": 1,
+            "BusinessConceptId": 2,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Desconocido",
+                  "Value": ""
+                },
+                {
+                  "Name": "Alicates / Elementos de corte",
+                  "Value": ""
+                },
+                {
+                  "Name": "Imanes",
+                  "Value": ""
+                },
+                {
+                  "Name": "Objetos/instrumentos punzantes",
+                  "Value": ""
+                },
+                {
+                  "Name": "Maniuplación manual / carterista / tirón de bolso",
+                  "Value": ""
+                },
+                {
+                  "Name": "Arma blanca",
+                  "Value": ""
+                },
+                {
+                  "Name": "Arma de fuego",
+                  "Value": ""
+                },
+                {
+                  "Name": "Objetos contundentes",
+                  "Value": ""
+                },
+                {
+                  "Name": "Ocultación",
+                  "Value": "",
+                  "IsSelected": true
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "566e7689-e89e-4f3e-a8a1-b67a7e062c44",
+            "IsMandatory": false,
+            "Label": "Medio de ocultación",
+            "Order": 2,
+            "BusinessConceptId": 14,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "No aplica",
+                  "Value": ""
+                },
+                {
+                  "Name": "Bandolera/Mochila/bolso",
+                  "Value": ""
+                },
+                {
+                  "Name": "Bolsa de establecimiento comercial",
+                  "Value": ""
+                },
+                {
+                  "Name": "Bolso forrado de aluminio",
+                  "Value": ""
+                },
+                {
+                  "Name": "Carro de bebé",
+                  "Value": ""
+                },
+                {
+                  "Name": "Carro de la compra",
+                  "Value": ""
+                },
+                {
+                  "Name": "Entre pertenencias",
+                  "Value": "",
+                  "IsSelected": true
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "efc92143-e0eb-42a6-91dc-36731ae4ed83",
+            "IsMandatory": false,
+            "Label": "¿Cómo se ha detectado?",
+            "Order": 3,
+            "BusinessConceptId": 29,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Aviso terceras personas",
+                  "Value": ""
+                },
+                {
+                  "Name": "CCTV",
+                  "Value": ""
+                },
+                {
+                  "Name": "Centro de Control",
+                  "Value": ""
+                },
+                {
+                  "Name": "Control visual",
+                  "Value": "",
+                  "IsDefault": true,
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Sistemas Anti-Hurto / RFID",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          }
+        ]
+      },
+      {
+        "Name": "¿A QUIÉN SE HA AVISADO?",
+        "Guid": "1d294969-4160-4313-aa29-ff92db0e7625",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 5,
+            "Guid": "3b2edd48-0b99-4e4b-9d7c-9f57b4f22618",
+            "IsMandatory": true,
+            "Label": "¿ A las asistencias?",
+            "Order": 1,
+            "IsFilled": true,
+            "BusinessConceptId": 17,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {
+              "Value": true,
+              "LabelTrue": "Sí",
+              "LabelFalse": "No"
+            },
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "e5c1ed33-dc6e-4f1b-9669-0020451a5f20",
+            "IsMandatory": true,
+            "Label": "Asitencias",
+            "Order": 2,
+            "BusinessConceptId": 18,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "No Aplica",
+                  "Value": "",
+                  "Guid": "d84a9311-2630-4572-942d-0ae5899cab43",
+                  "Order": 9
+                },
+                {
+                  "Name": "Asistencia sanitaria",
+                  "Value": "",
+                  "Guid": "d821e7c6-a7b5-4cef-84e9-598263d57d17",
+                  "Order": 1
+                },
+                {
+                  "Name": "Bomberos",
+                  "Value": "",
+                  "Guid": "2d019b55-270d-459a-b197-22e1aa839500",
+                  "Order": 2
+                },
+                {
+                  "Name": "Ertzaintza",
+                  "Value": "",
+                  "Guid": "2d634713-000a-449e-99e8-d030789a2237",
+                  "Order": 3
+                },
+                {
+                  "Name": "Guardia Civil",
+                  "Value": "",
+                  "Guid": "1aff5742-440b-45d3-a728-67ce2884c0b3",
+                  "Order": 4
+                },
+                {
+                  "Name": "Mossos d'esquadra",
+                  "Value": "",
+                  "Guid": "e313326a-b178-427a-b833-acd07b3c37c7",
+                  "Order": 5
+                },
+                {
+                  "Name": "Policía Local",
+                  "Value": "",
+                  "Guid": "03cdb504-500d-4a13-b0ef-3104b1ccc307",
+                  "Order": 6
+                },
+                {
+                  "Name": "Policía Nacional",
+                  "Value": "",
+                  "IsSelected": true,
+                  "Guid": "7547fa28-0e83-4ed0-92e2-f83b015b07fb",
+                  "Order": 7
+                },
+                {
+                  "Name": "Policía Foral de Navarra",
+                  "Value": "",
+                  "Guid": "2b66673b-8942-4e9e-afa4-6616b57bd775",
+                  "Order": 8
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 5,
+            "Guid": "233e220e-af7f-4608-b4e3-844fdf849b6b",
+            "IsMandatory": true,
+            "Label": "¿Se han personado las asistencias?",
+            "Order": 4,
+            "IsFilled": true,
+            "BusinessConceptId": 19,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {
+              "Value": true,
+              "LabelTrue": "Sí",
+              "LabelFalse": "No"
+            },
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 4,
+            "Guid": "4623878e-81e4-4ad4-be24-c7d46f0c1f3d",
+            "IsMandatory": false,
+            "Label": "Hora de llegada de las asistencias",
+            "Order": 5,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": true,
+              "IsDate": false,
+              "Value": "2019-05-20T08:00:00Z"
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "8f7bb738-b8e7-473c-8808-ff4d7e8a0c6a",
+            "IsMandatory": false,
+            "Label": "¿Quién ha avisado?",
+            "Order": 3,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Vigilante",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Tienda",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          }
+        ]
+      },
+      {
+        "Name": "RESULTADO ",
+        "Guid": "429fa51f-6083-479c-9e8f-3738ebc89fb7",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 5,
+            "Guid": "6c6f475b-da9f-4423-b7c8-017a3da4b922",
+            "IsMandatory": true,
+            "Label": "Denuncia",
+            "Order": 3,
+            "IsFilled": true,
+            "BusinessConceptId": 16,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {
+              "Value": true,
+              "LabelTrue": "Sí",
+              "LabelFalse": "No"
+            },
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "63e72707-753f-48d8-8e68-b3ec8a12d025",
+            "IsMandatory": true,
+            "Label": "Resultado de actuación",
+            "Order": 1,
+            "BusinessConceptId": 3,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "A  disposición de FFCS",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Desalojo del autor/autores",
+                  "Value": ""
+                },
+                {
+                  "Name": "Huida con recuperación artículo/os",
+                  "Value": ""
+                },
+                {
+                  "Name": "Huida sin recuperación artículo/os",
+                  "Value": ""
+                },
+                {
+                  "Name": "Detención",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Indocumentado",
+                  "Value": ""
+                },
+                {
+                  "Name": "Salida sin compra",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 3,
+            "Guid": "5ac4a002-c891-45d5-806f-2902f20440f7",
+            "IsMandatory": false,
+            "Label": "Descripción de los hechos",
+            "Order": 2,
+            "IsFilled": true,
+            "BusinessConceptId": 52,
+            "TextBoxField": {
+              "HasMultiline": true,
+              "MaxLength": 400,
+              "Prompt": "Recuerda que puedes dictar mediante el micrófono del teclado.",
+              "Value": "VS reconoce a Reincidente saliendo por la línea de cajas ,VS lo para tras rebasar la línea de caja y le realiza una comprobación recuperando el producto.VS lo traslada al almacén y se llama a las FCS.CNP se presenta ,lo identifican y se lo llevan detenido por estar en busca y captura .VS actúa sólo en todo momento sin presencia de gerentes. "
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          }
+        ]
+      },
+      {
+        "Name": "ADJUNTAR ARCHIVOS ",
+        "Guid": "3dbd5a09-620e-4157-966e-46082beff93d",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 10,
+            "Guid": "5290105c-0a82-440d-a195-50745bf42ab7",
+            "IsMandatory": false,
+            "HelpText": "Recuerda que no se pueden adjuntar fotografías de personas.t",
+            "Label": " Si quieres, para completar tu informe puedes adjuntar una fotografía y/o archivo. Muchas gracias por tu colaboración y buen servicio!ttt",
+            "Order": 2,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          },
+          {
+            "DFormFieldTypeId": 8,
+            "Guid": "003c10de-bd4d-427b-80d7-f47c4d465ef4",
+            "IsMandatory": false,
+            "Label": "Adjunto",
+            "Order": 1,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "IsOnlyFile": true,
+              "IsOnlyPicture": true,
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            },
+            "WeightField": {}
+          }
+        ]
+      }
+    ],
+    "FORMINSTANCEWEIGHTINGS": []
+  }
+}

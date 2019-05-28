@@ -47,7 +47,7 @@ case class TextBoxField(
                        )
 
 case class NumericFieldId(
-                           Value: Option[Int],
+                           Value: Option[Float],
                            MaxValue: Option[Long],
                            MinValue: Option[Long]
                          )
