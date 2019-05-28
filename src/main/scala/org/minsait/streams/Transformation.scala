@@ -21,7 +21,7 @@ object Transformation {
     decoded match {
       case Right(msg) => Some(msg)
       case Left(_) => {
-        logger.debug(s"[OSUSR_DGL_DFORM_I1] Couldn't parse the message: $input")
+        logger.debug(s"[OSUSR_DGL_DFORM_I1] Couldn't parse the message: $inputFormatted")
         None
       }
     }

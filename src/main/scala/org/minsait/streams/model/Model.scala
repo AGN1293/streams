@@ -9,12 +9,13 @@ case class JsonMessage(table: String,
 
 case class After(TENANT_ID: Int,
                  ID: Int,
-                 FORMINSTANCEFIELDS: List[InstanceFields])
+                 FORMINSTANCEFIELDS: List[InstanceFields],
+                 FORMINSTANCEWEIGHTINGS: Option[Seq[String]])
 
 case class InstanceFields(Name: String,
                           Guid: String,
                           FieldsList: List[Fields],
-                          Order: Int)
+                          Order: Option[Int])
 
 case class Fields(
                    DFormFieldTypeId: Int,
@@ -23,13 +24,19 @@ case class Fields(
                    IsFilled: Option[Boolean],
                    Label: String,
                    Order: Int,
+                   HelpText: Option[String],
                    BusinessConceptId: Option[Int],
                    TextBoxField: Option[TextBoxField],
                    NumericFieldId: Option[NumericFieldId],
                    LogicFieldId: Option[LogicFieldId],
                    OptionListFieldId: Option[OptionListFieldId],
+                   TableRecordLines: Option[Seq[String]],
                    DatetimeFieldId: Option[DatetimeFieldId],
-                   AttachmentFieldId: Option[AttachmentFieldId])
+                   AttachmentFieldId: Option[AttachmentFieldId],
+                   LabelFieldId: Option[LabelFieldId],
+                   WeightField: Option[Weight])
+
+case class Weight()
 
 case class TextBoxField(
                          HasMultiLine: Option[Boolean],
@@ -50,7 +57,8 @@ case class LogicFieldId(
                        )
 
 case class OptionListFieldId(
-                              OptionChoicesList: Option[List[OptionChoices]]
+                              OptionChoicesList: Option[List[OptionChoices]],
+                              HasMultipleChoice: Option[Boolean]
                             )
 
 case class OptionChoices(
@@ -81,6 +89,9 @@ case class AttachmentLineField(
                               Value: Option[String],
                               FileName: Option[String]
                               )
+case class LabelFieldId (
+                          HasMultiline: Option[Boolean]
+                        )
 
 case class ResponseMessage(
                      ID: Int,
