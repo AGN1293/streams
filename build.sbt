@@ -17,6 +17,7 @@ libraryDependencies ++= {
     "io.circe" %% "circe-generic-extras" % circeVersion % "compile" withSources(),
     "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2" % "compile" withSources(),
     "org.typelevel" %% "cats-core" % "1.5.0" % "compile" withSources(),
+    "io.spray" %%  "spray-json" % "1.3.5" % Compile withSources(),
     "org.typelevel" %% "cats-effect" % "0.5" % "compile" withSources(),
     "ch.qos.logback" % "logback-classic" % "1.2.3" % "compile" withSources(),
     "org.scala-sbt" % "util-interface" % "1.2.2" % Compile withSources(),

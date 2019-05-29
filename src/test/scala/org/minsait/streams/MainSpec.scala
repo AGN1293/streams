@@ -21,6 +21,7 @@ class MainSpec extends FlatSpec with Matchers with TestSpec {
       Source.fromInputStream(getClass.getClassLoader.getResourceAsStream("response.json")).getLines().mkString
     }.unsafeRunSync()
     publishToKafka("input-topic", words)
+    consumeMessage("output-topic")
     consumeMessage("output-topic") shouldBe expected
   }
 

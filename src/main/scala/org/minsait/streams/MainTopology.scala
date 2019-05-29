@@ -3,7 +3,8 @@ package org.minsait.streams
 
 import org.apache.kafka.streams.{KeyValue, StreamsBuilder}
 import org.minsait.streams.Transformation.{formatEvents, jsonToClass}
-import org.minsait.streams.model.JsonMessage
+import org.minsait.streams.model.{JsonMessage, ResponseMessage}
+import scala.collection.JavaConverters._
 
 class MainTopology {
 
@@ -11,7 +12,9 @@ class MainTopology {
     val builder = new StreamsBuilder()
     builder.stream(sourceTopic)
       .map[String, Option[JsonMessage]]((key, value) => toJsonEvent(key, value))
-      .map[String, String]((key, value) => toFormattedEvents(key, value))
+      .flatMap[String, String](
+      (key, value) => toFormattedEvents(key, value)
+    )
       .to(sinkTopic)
     builder.build()
   }
@@ -23,9 +26,8 @@ class MainTopology {
   }
 
   private val toFormattedEvents = (key: String, value: Option[JsonMessage]) => {
-    val jsonEvents = formatEvents(value)
-    println(jsonEvents)
-    new KeyValue(key, jsonEvents)
+    val jsonEvents: List[String] = formatEvents(value)
+    jsonEvents.map(event => new KeyValue(key,event)).asJava
   }
 
 }
