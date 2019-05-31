@@ -1,7 +1,8 @@
 package org.minsait.streams.model
 
-case class JsonMessage(after: After,
-                       current_ts: String)
+case class KafkaRecord()
+
+case class JsonMessage(payload: After)
 
 case class After(TENANT_ID: Int,
                  ID: Int,
@@ -67,5 +68,5 @@ case class ResponseMessage(
                      TIPO: Int,
                      ETIQUETA: String,
                      VALOR: String,
-                     TD_T_TIMESTAMP: String
+                     GG_T_TIMESTAMP: String
                    )
