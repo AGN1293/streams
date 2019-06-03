@@ -88,11 +88,11 @@ case class LabelField(
                      )
 
 case class ResponseMessage(
-                     ID: Int,
-                     TENANT_ID: Int,
-                     CUSTOM_ID: String,
-                     FORM_FIELD: Int,
-                     LABEL: String,
-                     VALUE: String,
-                     FILE_NAME: Option[String] = None
-                   )
+                            ID: Int,
+                            TENANT_ID: Int,
+                            ITEM: String,
+                            TIPO: Int,
+                            ETIQUETA: String,
+                            VALOR: String,
+                            GG_T_TIMESTAMP: String
+                          )
