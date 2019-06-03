@@ -1,7 +1,7 @@
 package org.minsait.streams
 
 import io.circe.Printer
-import org.minsait.streams.model.{JsonMessage, ResponseMessage}
+import org.minsait.streams.model.{JsonMessage, JsonResponse, PayloadFields, ResponseMessage, Schema}
 import io.circe.parser.decode
 import org.slf4j.LoggerFactory
 import io.circe.generic.auto._
@@ -24,12 +24,23 @@ object Transformation {
     decoded match {
       case Right(msg) => Some(msg)
       case Left(left) => {
-        println(left)
+        logger.debug(s"[OSUSR_DGL_DFORM_I1] Error: $left")
         logger.debug(s"[OSUSR_DGL_DFORM_I1] Couldn't parse the message: $input")
         None
       }
     }
   }
+
+  val fieldList = List(
+    PayloadFields("int64", "ID"),
+    PayloadFields("int64", "TENANT_ID"),
+    PayloadFields("string", "ITEM"),
+    PayloadFields("int64", "TIPO"),
+    PayloadFields("string", "ETIQUETA"),
+    PayloadFields("string", "VALOR"),
+    PayloadFields("string", "GG_T_TIMESTAMP"))
+
+  val dummyJson = JsonResponse(Schema(fields = fieldList))
 
   def formatEvents(json: Option[JsonMessage]): String = {
     var results: ArrayBuffer[ResponseMessage] = ArrayBuffer.empty
