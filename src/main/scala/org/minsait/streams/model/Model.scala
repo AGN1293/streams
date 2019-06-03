@@ -56,6 +56,12 @@ case class AttachmentLineField(
                                 FileName: Option[String]
                               )
 
+case class JsonResponse(schema: Schema, payload: Option[ResponseMessage] = None)
+
+case class Schema(`type`: String = "struct", fields: List[PayloadFields])
+
+case class PayloadFields(`type`: String, field: String)
+
 case class ResponseMessage(
                             ID: Int,
                             TENANT_ID: Int,
