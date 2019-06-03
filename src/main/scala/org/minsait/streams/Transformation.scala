@@ -39,7 +39,7 @@ object Transformation {
         val id = msg.after.ID
         val tenantId = msg.after.TENANT_ID
         var xIndex = -1
-        msg.after.FORMINSTANCEFIELDS.foreach {
+        msg.after.FORMINSTANCEFIELDS.get.foreach {
           x =>
             xIndex += 1
             var yIndex = -1
