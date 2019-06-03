@@ -107,7 +107,7 @@ object Transformation {
                 }
             }
         }
-        results.asJson.pretty(printer)
+        results.toList.map(event => event.asJson.pretty(printer))
       }
     }
   }
