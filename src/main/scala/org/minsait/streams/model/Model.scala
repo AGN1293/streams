@@ -10,16 +10,12 @@ case class After(TENANT_ID: Int,
                  FORMINSTANCEFIELDS: List[InstanceFields])
 
 case class InstanceFields(Name: String,
-                          Guid: String,
-                          FieldsList: List[Fields],
-                          Order: Int)
+                          FieldsList: List[Fields])
 
 case class Fields(
                    DFormFieldTypeId: Int,
-                   Guid: String,
                    IsMandatory: Option[Boolean],
                    IsFilled: Option[Boolean],
-                   HelpText: Option[String],
                    Label: String,
                    Order: Int,
                    BusinessConceptId: Option[Int],
@@ -29,8 +25,7 @@ case class Fields(
                    OptionListFieldId: Option[OptionListFieldId],
                    DatetimeFieldId: Option[DatetimeFieldId],
                    AttachmentFieldId: Option[AttachmentFieldId],
-                   LabelFieldId: Option[LabelField],
-                   WeightField: Option[String])
+                   LabelFieldId: Option[LabelField])
 
 case class TextBoxField(
                          HasMultiLine: Option[Boolean],
