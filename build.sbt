@@ -1,4 +1,4 @@
-name := "kafka-streams_OSUSR_DGL_DFORM_I1-J"
+name := "kafka-streams_OSUSR_DGL_DFORM_I1-J-V2"
 
 version := "0.1"
 
