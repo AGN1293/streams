@@ -20,8 +20,8 @@ case class Fields(
                    LogicFieldId: Option[LogicFieldId],
                    OptionListFieldId: Option[OptionListFieldId],
                    DatetimeFieldId: Option[DatetimeFieldId],
-                   AttachmentFieldId: Option[AttachmentFieldId])
-case class Weight()
+                   AttachmentFieldId: Option[AttachmentFieldId],
+                   BusinessConceptId: Option[Int])
 
 case class TextBoxField(Value: Option[String])
 
@@ -67,7 +67,10 @@ case class ResponseMessage(
                             TENANT_ID: Int,
                             ITEM: String,
                             TIPO: Int,
+                            BUSINESS_CONCEPT: Int,
+                            POS: String,
                             ETIQUETA: String,
                             VALOR: String,
-                            GG_T_TIMESTAMP: String
+                            GG_T_TIMESTAMP: String,
+                            TD_T_TIMESTAMP: String
                           )

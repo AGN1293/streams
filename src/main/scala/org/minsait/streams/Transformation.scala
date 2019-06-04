@@ -36,9 +36,12 @@ object Transformation {
     PayloadFields("int64", "TENANT_ID"),
     PayloadFields("string", "ITEM"),
     PayloadFields("int64", "TIPO"),
+    PayloadFields("int64", "BUSINESS_CONCEPT"),
+    PayloadFields("string", "POS"),
     PayloadFields("string", "ETIQUETA"),
     PayloadFields("string", "VALOR"),
-    PayloadFields("string", "GG_T_TIMESTAMP"))
+    PayloadFields("string", "GG_T_TIMESTAMP"),
+    PayloadFields("string", "TD_T_TIMESTAMP"))
 
   val dummyJson = JsonResponse(Schema(fields = fieldList))
 
@@ -60,18 +63,18 @@ object Transformation {
                 y.DFormFieldTypeId match {
                   case 3 =>
                     if (y.IsFilled.getOrElse(false)) {
-                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 3, y.Label, y.TextBoxField.get.Value.get, msg.current_ts)))
+                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 3, y.Label, y.TextBoxField.get.Value.get, y.BusinessConceptId.getOrElse(null), msg.current_ts)))
                     }
                   case 4 =>
                     if (y.DatetimeFieldId.isDefined && y.DatetimeFieldId.get.Value.isDefined) {
-                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 4, y.Label, y.DatetimeFieldId.get.Value.get, msg.current_ts)))
+                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 4, y.Label, y.DatetimeFieldId.get.Value.get, y.BusinessConceptId.getOrElse(null), msg.current_ts)))
                     }
                   case 5 =>
                     if (y.IsFilled.getOrElse(false) && y.LogicFieldId.isDefined) {
                       if (y.LogicFieldId.get.Value.getOrElse(false))
-                        results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 5, y.Label, y.LogicFieldId.get.LabelTrue.getOrElse(""), msg.current_ts)))
+                        results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 5, y.Label, y.LogicFieldId.get.LabelTrue.getOrElse(""), y.BusinessConceptId.getOrElse(null), msg.current_ts)))
                       else
-                        results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 5, y.Label, y.LogicFieldId.get.LabelFalse.getOrElse(""), msg.current_ts)))
+                        results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 5, y.Label, y.LogicFieldId.get.LabelFalse.getOrElse(""), y.BusinessConceptId.getOrElse(null), msg.current_ts)))
                     }
                   case 6 =>
                     if (y.OptionListFieldId.isDefined && y.OptionListFieldId.get.OptionChoicesList.isDefined) {
@@ -81,17 +84,17 @@ object Transformation {
                         option =>
                           zIndex += 1
                           if (option.IsSelected.isDefined && option.IsSelected.get && option.Name.isDefined)
-                            results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-" + zIndex, 6, y.Label, option.Name.get, msg.current_ts)))
+                            results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-" + zIndex, 6, y.Label, option.Name.get, y.BusinessConceptId.getOrElse(null), msg.current_ts)))
                       }
                     }
                   case 7 =>
                     if (y.NumericFieldId.isDefined && y.NumericFieldId.get.Value.isDefined)
-                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 7, y.Label, y.NumericFieldId.get.Value.get.toString, msg.current_ts)))
+                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 7, y.Label, y.NumericFieldId.get.Value.get.toString, y.BusinessConceptId.getOrElse(null), msg.current_ts)))
                   case 8 =>
                     if (y.AttachmentFieldId.isDefined && y.AttachmentFieldId.get.AttachmentLines.isDefined && y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.isDefined && y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.get.nonEmpty) {
                       val value = y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.get.head.Value.getOrElse("")
                       val fileName = y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.get.head.FileName.get
-                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 8, y.Label, value + ":" + fileName, msg.current_ts)))
+                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 8, y.Label, value + ":" + fileName, y.BusinessConceptId.getOrElse(null), msg.current_ts)))
                     }
                   case 9 =>
                     if (y.OptionListFieldId.isDefined && y.OptionListFieldId.get.OptionChoicesList.isDefined) {
@@ -100,7 +103,7 @@ object Transformation {
                         option =>
                           zIndex += 1
                           if (option.IsSelected.getOrElse(false))
-                            results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-" + zIndex, 9, y.Label, option.Name.get, msg.current_ts)))
+                            results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-" + zIndex, 9, y.Label, option.Name.get, y.BusinessConceptId.getOrElse(null), msg.current_ts)))
                       }
                     }
                   case _ =>
