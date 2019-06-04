@@ -5,6 +5,7 @@ import org.apache.kafka.streams.{KeyValue, StreamsBuilder}
 import org.minsait.streams.Transformation.{formatEvents, jsonToClass}
 import org.minsait.streams.model.JsonMessage
 import org.slf4j.LoggerFactory
+import scala.collection.JavaConverters._
 
 class MainTopology {
 
