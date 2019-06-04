@@ -1,7 +1,7 @@
 package org.minsait.streams.model
 
 case class JsonMessage(
-                       current_ts: String,
+                       op_ts: String,
                        pos: String,
                        after: After
                       )
