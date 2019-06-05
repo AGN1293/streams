@@ -1,14 +1,10 @@
 package org.minsait.streams.model
 
-case class JsonMessage(
-                       op_ts: String,
-                       op_type: String,
-                       pos: String,
-                       after: After
-                      )
+case class JsonMessage(payload: After)
 
 case class After(TENANT_ID: Int,
                  ID: Int,
+                 POS: String,
                  FORMINSTANCEFIELDS: Option[List[InstanceFields]])
 
 case class InstanceFields(FieldsList: List[Fields])

@@ -53,12 +53,13 @@ object Transformation {
     var results: ArrayBuffer[JsonResponse] = ArrayBuffer.empty
     json match {
       case Some(msg) => {
-        logger.debug(s"[OSUSR_DGL_DFORM_I1] Parsing message with id: {${json.get.after.ID}}")
-        val id = msg.after.ID
-        val tenantId = msg.after.TENANT_ID
+        logger.debug(s"[OSUSR_DGL_DFORM_I1] Parsing message with id: {${json.get.payload.ID}}")
+        val id = msg.payload.ID
+        val tenantId = msg.payload.TENANT_ID
+        val pos = msg.payload.POS
         var xIndex = -1
         val currentDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSS").format(new Date())
-        msg.after.FORMINSTANCEFIELDS.get.foreach {
+        msg.payload.FORMINSTANCEFIELDS.get.foreach {
           x =>
             xIndex += 1
             var yIndex = -1
@@ -72,18 +73,18 @@ object Transformation {
                 y.DFormFieldTypeId match {
                   case 3 =>
                     if (y.IsFilled.getOrElse(false)) {
-                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 3, businessConcept, y.Label, y.TextBoxField.get.Value.get, msg.op_type, msg.op_ts, currentDate, msg.pos)))
+                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 3, businessConcept, y.Label, y.TextBoxField.get.Value.get, "I", currentDate, currentDate, pos)))
                     }
                   case 4 =>
                     if (y.DatetimeFieldId.isDefined && y.DatetimeFieldId.get.Value.isDefined) {
-                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 4, businessConcept, y.Label, y.DatetimeFieldId.get.Value.get, msg.op_type, msg.op_ts, currentDate, msg.pos)))
+                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 4, businessConcept, y.Label, y.DatetimeFieldId.get.Value.get, "I", currentDate, currentDate, pos)))
                     }
                   case 5 =>
                     if (y.IsFilled.getOrElse(false) && y.LogicFieldId.isDefined) {
                       if (y.LogicFieldId.get.Value.getOrElse(false))
-                        results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 5, businessConcept, y.Label, y.LogicFieldId.get.LabelTrue.getOrElse(""), msg.op_type, msg.op_ts, currentDate, msg.pos)))
+                        results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 5, businessConcept, y.Label, y.LogicFieldId.get.LabelTrue.getOrElse(""), "I", currentDate, currentDate, pos)))
                       else
-                        results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 5, businessConcept, y.Label, y.LogicFieldId.get.LabelFalse.getOrElse(""), msg.op_type, msg.op_ts, currentDate, msg.pos)))
+                        results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 5, businessConcept, y.Label, y.LogicFieldId.get.LabelFalse.getOrElse(""), "I", currentDate, currentDate, pos)))
                     }
                   case 6 =>
                     if (y.OptionListFieldId.isDefined && y.OptionListFieldId.get.OptionChoicesList.isDefined) {
@@ -93,17 +94,17 @@ object Transformation {
                         option =>
                           zIndex += 1
                           if (option.IsSelected.isDefined && option.IsSelected.get && option.Name.isDefined)
-                            results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-" + zIndex, 6, businessConcept, y.Label, option.Name.get, msg.op_type, msg.op_ts, currentDate, msg.pos)))
+                            results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-" + zIndex, 6, businessConcept, y.Label, option.Name.get, "I", currentDate, currentDate, pos)))
                       }
                     }
                   case 7 =>
                     if (y.NumericFieldId.isDefined && y.NumericFieldId.get.Value.isDefined)
-                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 7, businessConcept, y.Label, y.NumericFieldId.get.Value.get.toString, msg.op_type, msg.op_ts, currentDate, msg.pos)))
+                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 7, businessConcept, y.Label, y.NumericFieldId.get.Value.get.toString, "I", currentDate, currentDate, pos)))
                   case 8 =>
                     if (y.AttachmentFieldId.isDefined && y.AttachmentFieldId.get.AttachmentLines.isDefined && y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.isDefined && y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.get.nonEmpty) {
                       val value = y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.get.head.Value.getOrElse("")
                       val fileName = y.AttachmentFieldId.get.AttachmentLines.get.AttachmentLineFieldList.get.head.FileName.get
-                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 8, businessConcept, y.Label, value + ":" + fileName, msg.op_type, msg.op_ts, currentDate, msg.pos)))
+                      results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-0", 8, businessConcept, y.Label, value + ":" + fileName, "I", currentDate, currentDate, pos)))
                     }
                   case 9 =>
                     if (y.OptionListFieldId.isDefined && y.OptionListFieldId.get.OptionChoicesList.isDefined) {
@@ -112,7 +113,7 @@ object Transformation {
                         option =>
                           zIndex += 1
                           if (option.IsSelected.getOrElse(false))
-                            results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-" + zIndex, 9, businessConcept, y.Label, option.Name.get, msg.op_type, msg.op_ts, currentDate, msg.pos)))
+                            results += dummyJson.copy(payload = Some(ResponseMessage(id, tenantId, xIndex + "-" + yIndex + "-" + zIndex, 9, businessConcept, y.Label, option.Name.get, "I", currentDate, currentDate, pos)))
                       }
                     }
                   case _ =>
