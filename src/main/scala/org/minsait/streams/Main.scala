@@ -4,6 +4,7 @@ import java.util.Properties
 import java.util.concurrent.TimeUnit
 
 import com.typesafe.config.ConfigFactory
+import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.common.serialization.Serdes
 import org.apache.kafka.streams.{KafkaStreams, StreamsConfig}
 import org.slf4j.LoggerFactory
@@ -22,6 +23,7 @@ object Main extends App {
     p.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers)
     p.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String.getClass)
     p.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass)
+    p.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest")
     p
   }
 

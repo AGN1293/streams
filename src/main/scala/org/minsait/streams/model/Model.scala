@@ -65,7 +65,7 @@ case class ResponseMessage(
                             TENANT_ID: Int,
                             ITEM: String,
                             TIPO: Int,
-                            BUSINESS_CONCEPT: Option[Int],
+                            BUSINESS_CONCEPT: Int,
                             ETIQUETA: String,
                             VALOR: String,
                             GG_T_TYPE: String,
