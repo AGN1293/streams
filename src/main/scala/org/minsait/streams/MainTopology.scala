@@ -23,7 +23,6 @@ class MainTopology {
   }
 
   private val toJsonEvent = (key: String, value: String) => {
-    println(value)
     val jsonEventsAsCaseClasses = jsonToClass(value)
     new KeyValue(key, jsonEventsAsCaseClasses)
   }

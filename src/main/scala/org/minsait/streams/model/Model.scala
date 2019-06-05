@@ -2,6 +2,7 @@ package org.minsait.streams.model
 
 case class JsonMessage(
                        op_ts: String,
+                       op_type: String,
                        pos: String,
                        after: After
                       )
@@ -69,9 +70,10 @@ case class ResponseMessage(
                             ITEM: String,
                             TIPO: Int,
                             BUSINESS_CONCEPT: Option[Int],
-                            POS: String,
                             ETIQUETA: String,
                             VALOR: String,
+                            GG_T_TYPE: String,
                             GG_T_TIMESTAMP: String,
-                            TD_T_TIMESTAMP: String
+                            TD_T_TIMESTAMP: String,
+                            POS: String
                           )
