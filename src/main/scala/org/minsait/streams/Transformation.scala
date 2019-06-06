@@ -65,10 +65,7 @@ object Transformation {
             x.FieldsList.foreach {
               y =>
                 yIndex += 1
-                val businessConcept = y.BusinessConceptId.getOrElse(-99) match {
-                  case -99 => None
-                  case number => Some(number)
-                }
+                val businessConcept = y.BusinessConceptId.getOrElse(0)
                 y.DFormFieldTypeId match {
                   case 3 =>
                     if (y.IsFilled.getOrElse(false)) {
