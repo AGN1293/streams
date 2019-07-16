@@ -121,6 +121,7 @@ object Transformation {
         }
         results.toList.map(event => event.asJson.pretty(printer))
       }
+      case None => List.empty
     }
   }
 
