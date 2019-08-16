@@ -23,7 +23,10 @@ case class Fields(
                    OptionListFieldId: Option[OptionListFieldId],
                    DatetimeFieldId: Option[DatetimeFieldId],
                    AttachmentFieldId: Option[AttachmentFieldId],
-                   BusinessConceptId: Option[Int])
+                   BusinessConceptId: Option[Int],
+                   WeightField: Option[WeightField],
+                   QualificationField: Option[QualificationField],
+                   TableRecordLines: Option[List[TableRecordLineFieldList]])
 
 case class TextBoxField(Value: Option[String])
 
@@ -58,6 +61,18 @@ case class AttachmentLineField(
                                 FileName: Option[String]
                               )
 
+case class WeightField(
+                        ValueWeight: Option[Int]
+                      )
+
+case class QualificationField(
+                             Value: Option[Int]
+                             )
+
+case class TableRecordLineFieldList(
+                             TableRecordLineFieldList: Option[List[Fields]]
+                           )
+
 case class JsonResponse(schema: Schema, payload: Option[ResponseMessage] = None)
 
 case class Schema(`type`: String = "struct", fields: List[PayloadFields])
@@ -72,6 +87,7 @@ case class ResponseMessage(
                             BUSINESS_CONCEPT: Int,
                             ETIQUETA: String,
                             VALOR: String,
+                            TABLERECORDNAME: Option[String],
                             GG_T_TYPE: String,
                             GG_T_TIMESTAMP: String,
                             TD_T_TIMESTAMP: String,
