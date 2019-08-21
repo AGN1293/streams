@@ -1,0 +1,74 @@
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "int64",
+        "field": "ID"
+      },
+      {
+        "type": "int64",
+        "field": "TENANT_ID"
+      },
+      {
+        "type": "string",
+        "field": "ITEM"
+      },
+      {
+        "type": "int64",
+        "field": "TIPO"
+      },
+      {
+        "type": "int64",
+        "field": "BUSINESS_CONCEPT"
+      },
+      {
+        "type": "string",
+        "field": "ETIQUETA"
+      },
+      {
+        "type": "string",
+        "field": "VALOR"
+      },
+      {
+        "type": "string",
+        "field": "TABLERECORDNAME"
+      },
+      {
+        "type": "int64",
+        "field": "LINE"
+      },
+      {
+        "type": "string",
+        "field": "GG_T_TYPE"
+      },
+      {
+        "type": "string",
+        "field": "GG_T_TIMESTAMP"
+      },
+      {
+        "type": "string",
+        "field": "TD_T_TIMESTAMP"
+      },
+      {
+        "type": "string",
+        "field": "POS"
+      }
+    ]
+  },
+  "payload": {
+    "ID": 910872,
+    "TENANT_ID": 83,
+    "ITEM": "1-0-1",
+    "TIPO": 6,
+    "BUSINESS_CONCEPT": 0,
+    "ETIQUETA": "Acción realizada",
+    "VALOR": "Apertura de acceso personal",
+    "TABLERECORDNAME": "null",
+    "LINE": -1,
+    "GG_T_TYPE": "I",
+    "GG_T_TIMESTAMP": "2019-08-10 08:51:14.999985",
+    "TD_T_TIMESTAMP": "2019-08-20T11:50:26.0270",
+    "POS": "00000000580086430199"
+  }
+}
