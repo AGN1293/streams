@@ -62,7 +62,7 @@ case class AttachmentLineField(
                               )
 
 case class WeightField(
-                        ValueWeight: Option[Int]
+                        ValueWeight: Option[Float]
                       )
 
 case class QualificationField(
