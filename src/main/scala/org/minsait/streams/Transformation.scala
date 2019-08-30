@@ -57,11 +57,11 @@ object Transformation {
     var results: ArrayBuffer[JsonResponse] = ArrayBuffer.empty
     json match {
       case Some(msg) => {
-        logger.debug(s"[OSUSR_DGL_DFORM_I1] Parsing message with id: {${json.get.after.ID}}")
-        val id = msg.after.ID
-        val tenantId = msg.after.TENANT_ID
+        logger.debug(s"[OSUSR_DGL_DFORM_I1] Parsing message with id: {${json.get.payload.ID}}")
+        val id = msg.payload.ID
+        val tenantId = msg.payload.TENANT_ID
         val currentDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSS").format(new Date())
-        if (msg.after.FORMINSTANCEFIELDS.isDefined) loopFields(msg.after.FORMINSTANCEFIELDS.get, id, tenantId, msg.op_type, msg.op_ts, currentDate, msg.pos, None).map(event => event.asJson.pretty(printer))
+        if (msg.payload.FORMINSTANCEFIELDS.isDefined) loopFields(msg.payload.FORMINSTANCEFIELDS.get, id, tenantId, "I", currentDate, currentDate, msg.payload.pos, None).map(event => event.asJson.pretty(printer))
         else List.empty
       }
     }
