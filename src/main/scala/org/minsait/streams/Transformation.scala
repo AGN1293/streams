@@ -22,7 +22,7 @@ object Transformation {
   val printer: Printer = Printer.noSpaces
 
   def jsonToClass(input: String): Option[JsonMessage] = {
-    val inputFormatted = input.replace("\\\\\\\"", "").replace("\"[", "[").replace("]\"", "]").replace("\\", "")
+    val inputFormatted = input.replace("\\\\\\\"", "").replace("\"[", "[").replace("]\"", "]").replace("\\", "").replaceAll("[^\u0000-\uFFFF]", "")
     val decoded = decode[JsonMessage](inputFormatted)
     decoded match {
       case Right(msg) => Some(msg)
