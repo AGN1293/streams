@@ -77,7 +77,7 @@ object Transformation {
       x =>
         xIndex += 1
         var yIndex = -1
-        x.FieldsList.foreach {
+        x.FieldsList.getOrElse(List.empty).foreach {
           y =>
             yIndex += 1
             val businessConcept = y.BusinessConceptId.getOrElse(0)
@@ -89,7 +89,7 @@ object Transformation {
                     tableRecordLine =>
                       yIndex2 += 1
                       if (tableRecordLine.TableRecordLineFieldList.isDefined)
-                        results ++ loopFieldsTableRecord(List(InstanceFields(tableRecordLine.TableRecordLineFieldList.get)), id, tenantId, opType, ggTimestamp, tdTimestamp, pos, Some(y.Label), xIndex, yIndex2)
+                        results ++ loopFieldsTableRecord(List(InstanceFields(tableRecordLine.TableRecordLineFieldList)), id, tenantId, opType, ggTimestamp, tdTimestamp, pos, Some(y.Label), xIndex, yIndex2)
                   }
                 }
               case 3 =>
@@ -162,7 +162,7 @@ object Transformation {
     var zIndex = -1
     fieldList.foreach {
       x =>
-        x.FieldsList.foreach {
+        x.FieldsList.getOrElse(List.empty).foreach {
           y =>
             zIndex += 1
             val businessConcept = y.BusinessConceptId.getOrElse(0)
