@@ -7,7 +7,7 @@ case class After(TENANT_ID: Int,
                  POS: String,
                  FORMINSTANCEFIELDS: Option[List[InstanceFields]])
 
-case class InstanceFields(FieldsList: List[Fields])
+case class InstanceFields(FieldsList: Option[List[Fields]])
 
 case class Fields(
                    DFormFieldTypeId: Int,
