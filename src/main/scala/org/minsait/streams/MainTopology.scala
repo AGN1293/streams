@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory
 import scala.collection.JavaConverters._
 
 class MainTopology {
-
   val logger = LoggerFactory.getLogger(getClass)
 
   val createTopology = (sourceTopic: String, sinkTopic: String) => {

@@ -1,16 +1,39 @@
 {
-  "table": "MYSCHEMATOPIC.POPS-P-OSUSR_DGL_DFORM_I1-J",
-  "op_type": "U",
-  "op_ts": "2019-08-06 09:46:51.001750",
-  "current_ts": "2019-08-06T09:46:57.807000",
-  "pos": "00000000480096880611",
-  "before": {
-    "TENANT_ID": 83,
-    "ID": 866580
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "string",
+        "optional": true,
+        "field": "POS"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "TENANT_ID"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "ID"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "FORMINSTANCEFIELDS"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "FORMINSTANCEWEIGHTINGS"
+      }
+    ],
+    "optional": false
   },
-  "after": {
-    "TENANT_ID": 83,
-    "ID": 866580,
+  "payload": {
+    "POS": "SCN1774004894",
+    "TENANT_ID": "83",
+    "ID": "2",
     "FORMINSTANCEFIELDS": [
       {
         "Name": "¿CUÁNDO Y DÓNDE?",
@@ -19,23 +42,46 @@
           {
             "DFormFieldTypeId": 4,
             "Guid": "98938461-d206-4397-8cfc-552f43f94e0a",
-            "IsMandatory": true,
-            "Label": "¿Cuándo ha ocurrido?",
+            "IsMandatory": false,
+            "Label": "¿CUÁNDO HA OCURRIDO?",
             "Order": 1,
-            "BusinessConceptId": 4,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
             "DatetimeFieldId": {
               "IsDatetime": true,
               "IsDate": false,
-              "Value": "2019-08-06T07:44:12Z"
+              "Value": "2018-12-20T11:11:00Z",
+              "MaxDatetime": "2019-12-31T23:00:00Z"
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           },
           {
             "DFormFieldTypeId": 6,
             "Guid": "674116bb-2c86-47c1-98e2-834bbc4bda52",
-            "IsMandatory": true,
-            "Label": "*¿Dónde ha ocurrido?",
+            "IsMandatory": false,
+            "Label": "¿DÓNDE HA OCURRIDO?",
             "Order": 2,
-            "BusinessConceptId": 5,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
             "OptionListFieldId": {
               "OptionChoicesList": [
                 {
@@ -48,12 +94,12 @@
                 },
                 {
                   "Name": "Aseos",
-                  "Value": ""
+                  "Value": "",
+                  "IsSelected": true
                 },
                 {
                   "Name": "Zona de Acceso Público",
-                  "Value": "",
-                  "IsSelected": true
+                  "Value": ""
                 },
                 {
                   "Name": "Zona de Oficinas",
@@ -61,26 +107,27 @@
                 },
                 {
                   "Name": "Zona Restringida",
-                  "Value": ""
-                },
-                {
-                  "Name": "Zona exterior / fachadas",
                   "Value": "",
-                  "Guid": "c743dd93-08e6-44d5-8394-30f7a4d22f79",
-                  "Order": 6
-                },
-                {
-                  "Name": "Zona cubiertas / azotea",
-                  "Value": "",
-                  "Guid": "a15538fb-5ed1-4ec5-87e5-e0fbf9c3e932",
-                  "Order": 7
+                  "IsSelected": true
                 }
               ],
               "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           }
-        ],
-        "Order": 1
+        ]
       },
       {
         "Name": "¿QUÉ HA PASADO?",
@@ -88,783 +135,70 @@
         "FieldsList": [
           {
             "DFormFieldTypeId": 6,
-            "Guid": "53a8dcc6-a970-4c0a-8a55-7d585630d3a4",
-            "IsMandatory": true,
-            "Label": "Se ha visto afectado:",
-            "Order": 1,
-            "BusinessConceptId": 30,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "El Cliente",
-                  "Value": "",
-                  "IsSelected": true
-                },
-                {
-                  "Name": "Personal Ajeno / Terceras Personas",
-                  "Value": ""
-                },
-                {
-                  "Name": "Personal colaborador Externo",
-                  "Value": ""
-                },
-                {
-                  "Name": "Personal del Cliente",
-                  "Value": "",
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b",
-                  "ForkId": "   AFECTADO PERSONAL DEL CLIENTE",
-                  "IsFork": true
-                },
-                {
-                  "Name": "Personal de Prosegur",
-                  "Value": ""
-                }
-              ],
-              "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 3,
-            "Guid": "53a8dcc6-a970-4c0a-8a55-7d585630d3a4-0d2f6d34-3bf8-4b4c-9861-008e596bce4d",
-            "IsMandatory": false,
-            "Label": "Si el afectado es personal del cliente, indica quién (puesto o cargo):",
-            "Order": 1,
-            "IsHidden": true,
-            "TextBoxField": {
-              "HasMultiline": false,
-              "MaxLength": 400
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
             "Guid": "b8a53238-ae65-4a21-97cc-127b129b1492",
-            "IsMandatory": true,
-            "Label": "Se ha sustraído:",
+            "IsMandatory": false,
+            "Label": "¿QUÉ SUCESO HA OCURRIDO?",
             "Order": 2,
-            "BusinessConceptId": 40,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
             "OptionListFieldId": {
               "OptionChoicesList": [
                 {
-                  "Name": "Bienes del cliente (material, producto, etc.)",
+                  "Name": "No se presenta el operario",
+                  "Value": ""
+                },
+                {
+                  "Name": "No dispone de acreditación",
+                  "Value": ""
+                },
+                {
+                  "Name": "Acreditación errónea",
                   "Value": "",
                   "IsSelected": true
                 },
                 {
-                  "Name": "Bienes/Smartphone, tablet/efectos personales",
-                  "Value": "",
-                  "Guid": "e42b2eed-8159-461e-a426-56bd85e79699",
-                  "Order": 2,
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
+                  "Name": "Pérdida de acreditación / documentación",
+                  "Value": ""
                 },
                 {
-                  "Name": "Dinero / cartera / bolso",
+                  "Name": "Pérdida de llaves",
                   "Value": "",
-                  "Guid": "7454e38c-bbe4-425b-96f6-dc62f40e5b84",
-                  "Order": 3,
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
+                  "IsSelected": true
                 },
                 {
-                  "Name": "Material de trabajo",
-                  "Value": "",
-                  "Guid": "d76f8c60-c267-4112-bd67-b36e54294f3f",
-                  "Order": 3,
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
+                  "Name": "Retraso en hora de inicio",
+                  "Value": ""
                 },
                 {
-                  "Name": "Vehículo",
-                  "Value": "",
-                  "Guid": "700ff9ac-6e79-473d-a838-13b0cb74f588",
-                  "Order": 4,
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
+                  "Name": "Retraso en hora fin",
+                  "Value": ""
+                },
+                {
+                  "Name": "Abuso de privilegios de acceso físico",
+                  "Value": ""
                 }
               ],
               "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 7,
-            "Guid": "370c59c4-7365-4f60-88ce-e4a1b5625f9a",
-            "IsMandatory": false,
-            "Label": "Importe aproximado de lo sustraído:",
-            "Order": 3,
-            "IsFilled": true,
-            "NumericFieldId": {
-              "NumberOfDecimals": 2,
-              "Value": 2.0,
-              "MaxValue": 1000000.0
-            }
-          },
-          {
-            "DFormFieldTypeId": 5,
-            "Guid": "e585ca27-3691-4a17-b04a-2cf181fbe474",
-            "IsMandatory": false,
-            "Label": "¿Ha habido consecuencias sobre personas? (agresión / alteración del estado de la salud)",
-            "Order": 9,
-            "IsFilled": true,
-            "LogicFieldId": {
-              "Value": true,
-              "LabelTrue": "Sí",
-              "LabelFalse": "No",
-              "TrueIsFork": true,
-              "TrueForkGuid": "2e587f4f-f137-4842-85e2-cffcd8698d7b",
-              "TrueForkId": "CONSECUENCIAS AGRESIÓN : "
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "e585ca27-3691-4a17-b04a-2cf181fbe474-9ad9bff7-5efc-4cea-a2d8-2b47990ca462",
-            "IsMandatory": true,
-            "Label": "Consecuencias de la agresión:",
-            "Order": 1,
-            "BusinessConceptId": 38,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Sin lesiones aparentes",
-                  "Value": "",
-                  "IsSelected": true,
-                  "Guid": "4ef1e6f9-5c9e-4467-a38e-668e5f1d22b0",
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                },
-                {
-                  "Name": "Con lesiones aparentes (sangrado, dificultad al moverse, etc.)",
-                  "Value": "",
-                  "Guid": "a58c1527-f7c5-49d3-be96-eb5e662f86c1",
-                  "Order": 1
-                },
-                {
-                  "Name": "Alteración del estado de la salud (ansiedad, infarto, mareos, desorientación, etc.)",
-                  "Value": "",
-                  "Guid": "f56ac687-fb71-466a-b4d9-6b8ebdd432cf",
-                  "Order": 2
-                },
-                {
-                  "Name": "Pérdida de consciencia / desfallecimiento",
-                  "Value": "",
-                  "Guid": "8bc93613-2f35-4698-b5b2-4cbb12e18cd1",
-                  "Order": 3
-                },
-                {
-                  "Name": "Fallecimiento",
-                  "Value": "",
-                  "Guid": "4356bb3f-797b-44bd-b6a0-c574cedc63f5",
-                  "Order": 4
-                }
-              ]
-            }
-          },
-          {
-            "DFormFieldTypeId": 5,
-            "Guid": "e585ca27-3691-4a17-b04a-2cf181fbe474-580558df-ab05-450c-a487-be6819bca543",
-            "IsMandatory": false,
-            "Label": "¿Has tenido que realizar alguna maniobra de primeros auxilios?",
-            "Order": 2,
-            "IsFilled": true,
-            "LogicFieldId": {
-              "Value": true,
-              "LabelTrue": "Sí",
-              "LabelFalse": "No",
-              "TrueIsFork": true,
-              "TrueForkGuid": "6c08bee6-edd9-42b4-8ef8-df70c7eeb21b",
-              "TrueForkId": "PRIMEROS AUXILIOS"
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "e585ca27-3691-4a17-b04a-2cf181fbe474-580558df-ab05-450c-a487-be6819bca543-8630688e-f6bb-47b8-9717-dd32f7eab13d",
-            "IsMandatory": true,
-            "Label": "Si has tenido que realizar alguna maniobra de primeros auxilios, indica cual:\\t\\t",
-            "Order": 1,
-            "BusinessConceptId": 33,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Maniobra de Heimlich (evitar asfixia)",
-                  "Value": "",
-                  "Guid": "7936b809-ea68-44d2-8454-1dc245fa47e2",
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                },
-                {
-                  "Name": "Reanimación Cardiopulmonar (RCP)",
-                  "Value": "",
-                  "Guid": "d4bc4f06-240d-4f2c-8ac2-e68948d5f867",
-                  "Order": 1
-                },
-                {
-                  "Name": "Respiración boca a boca o de salvamento",
-                  "Value": "",
-                  "IsSelected": true,
-                  "Guid": "284d1f58-8eca-4e72-b8f9-8435c890285b",
-                  "Order": 2
-                },
-                {
-                  "Name": "Torniquete / compresión de hemorragias",
-                  "Value": "",
-                  "Guid": "c71e2e5e-9e77-473d-b144-b0249bc651a4",
-                  "Order": 3
-                },
-                {
-                  "Name": "Traqueotomía",
-                  "Value": "",
-                  "Guid": "bf6ef63a-eeef-43cc-955c-4b30fd5d4a72",
-                  "Order": 4
-                }
-              ]
-            }
-          },
-          {
-            "DFormFieldTypeId": 5,
-            "Guid": "fc731b33-b4c7-4e1e-bfc1-c2adcae2a939",
-            "IsMandatory": false,
-            "Label": "¿Tenemos información sobre el /los autor/es?",
-            "Order": 7,
-            "LogicFieldId": {
-              "LabelTrue": "Sí",
-              "LabelFalse": "No, sin información",
-              "TrueIsFork": true,
-              "TrueForkGuid": "ce80cd88-56e1-4d10-9304-064245eab808",
-              "TrueForkId": "AUTORES"
-            }
-          },
-          {
-            "DFormFieldTypeId": 1,
-            "Guid": "fc731b33-b4c7-4e1e-bfc1-c2adcae2a939-3f4e5e05-d5e8-4861-81b5-772dc45545db",
-            "IsMandatory": true,
-            "HelpText": "Información sobre el autor/autores",
-            "Label": "Autores",
-            "Order": 1,
-            "IsHidden": true,
-            "TableRecordLines": [
-              {
-                "TableRecordLineFieldList": [
-                  {
-                    "DFormFieldTypeId": 9,
-                    "Guid": "0620e8f4-5737-4331-a550-e2227f91e4f4",
-                    "IsMandatory": true,
-                    "Label": "Sexo:",
-                    "BusinessConceptId": 9,
-                    "OptionListFieldId": {
-                      "OptionChoicesList": [
-                        {
-                          "Name": "Hombre",
-                          "Value": "",
-                          "Guid": "19aa0c27-af75-4a9e-bb29-81303d597262",
-                          "Order": 1
-                        },
-                        {
-                          "Name": "Mujer",
-                          "Value": "",
-                          "Guid": "160aead0-4fc6-4e1e-87c9-51735d5c7869",
-                          "Order": 2
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "DFormFieldTypeId": 9,
-                    "Guid": "f5498192-bcf0-413d-97dd-d8f66e22c006",
-                    "IsMandatory": false,
-                    "Label": "Edad:",
-                    "Order": 1,
-                    "OptionListFieldId": {
-                      "OptionChoicesList": [
-                        {
-                          "Name": "Menor de edad",
-                          "Value": "",
-                          "Guid": "71d44461-1e42-4631-af06-1263a36b85f7",
-                          "Order": 1,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 18 y 25 años",
-                          "Value": "",
-                          "Guid": "dc21008f-2b89-480b-8076-2ebeaec52fd1",
-                          "Order": 2,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 26 y 35 años",
-                          "Value": "",
-                          "Guid": "b26967ae-2e92-4c67-bb43-03f166274dc1",
-                          "Order": 3,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 36 y 45 años",
-                          "Value": "",
-                          "Guid": "405432f7-53f9-43a5-a913-0660fdf16fa8",
-                          "Order": 4,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 46 y 55 años",
-                          "Value": "",
-                          "Guid": "f9786c1a-c3c5-4840-858c-f202fd61d5d8",
-                          "Order": 5,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 56 y 65 años",
-                          "Value": "",
-                          "Guid": "34268fc5-393a-4fd2-8a39-62f3cda071a9",
-                          "Order": 6,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Mayor de 65 años",
-                          "Value": "",
-                          "Guid": "a8cf4e88-0e95-4547-8a25-89f18dbf80fd",
-                          "Order": 7,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "DFormFieldTypeId": 9,
-                    "Guid": "e04ffa05-2742-48b3-b035-7cbeb7d8b02e",
-                    "IsMandatory": true,
-                    "Label": "Tipología del autor/autores:",
-                    "Order": 2,
-                    "OptionListFieldId": {
-                      "OptionChoicesList": [
-                        {
-                          "Name": "Ocasional",
-                          "Value": "",
-                          "Guid": "3b24ebed-a7d3-4dbf-991b-b422701c7ade",
-                          "Order": 1
-                        },
-                        {
-                          "Name": "Reincidente",
-                          "Value": "",
-                          "Guid": "6d455993-5be2-4be9-bd57-05259d7d6e3f",
-                          "Order": 2
-                        },
-                        {
-                          "Name": "Profesional / Banda organizada",
-                          "Value": "",
-                          "Guid": "a38a52a6-ba5b-4661-97e9-00d4c7d03bae",
-                          "Order": 3
-                        },
-                        {
-                          "Name": "Personal Colaborador Externo",
-                          "Value": "",
-                          "Guid": "698bfdca-0a2d-4755-ae4a-9788a33621cb",
-                          "Order": 4
-                        },
-                        {
-                          "Name": "Personal del Cliente",
-                          "Value": "",
-                          "Guid": "9aa07534-6434-4286-8a7a-b16c9ec0e32e",
-                          "Order": 5
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "DFormFieldTypeId": 7,
-                    "Guid": "943e0f67-20a9-45b3-b0c0-02bb16d4365a",
-                    "IsMandatory": true,
-                    "Label": "Nº de autor/autores",
-                    "Order": 3,
-                    "NumericFieldId": {
-                      "MaxValue": 99999.0
-                    }
-                  }
-                ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
               }
-            ]
-          }
-        ],
-        "Order": 2
-      },
-      {
-        "Name": "   AFECTADO PERSONAL DEL CLIENTE",
-        "Guid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 3,
-            "Guid": "0d2f6d34-3bf8-4b4c-9861-008e596bce4d",
-            "IsMandatory": false,
-            "Label": "Si el afectado es personal del cliente, indica quién (puesto o cargo):",
-            "Order": 1,
-            "TextBoxField": {
-              "HasMultiline": false,
-              "MaxLength": 400
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           }
-        ],
-        "Order": 1,
-        "IsFork": true,
-        "ParentId": "0",
-        "ParentGuid": "5b56d918-ee76-405e-b5bb-901ccd1ab109",
-        "ForkOrder": 7
-      },
-      {
-        "Name": "BIENES DEL CLIENTE",
-        "Guid": "33f3b12c-ba4c-4225-b081-c4bc4ab18915",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "29b88f53-aae7-45ab-924d-90d1efca5e6d",
-            "IsMandatory": false,
-            "Label": "Sección-Familia-Universo:",
-            "Order": 1,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "A",
-                  "Value": "",
-                  "Guid": "41569dc4-a963-4763-8c29-e2d80112560c",
-                  "Order": 5,
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                },
-                {
-                  "Name": "B",
-                  "Value": "",
-                  "Guid": "e1f2dcb3-a118-4a34-bbde-5ed181acce5a",
-                  "Order": 1
-                },
-                {
-                  "Name": "C",
-                  "Value": "",
-                  "Guid": "df86599a-5e9f-4326-a387-656aab964a43",
-                  "Order": 2
-                },
-                {
-                  "Name": "D",
-                  "Value": "",
-                  "Guid": "e986f128-0aaa-4c1f-9453-f01765a6714e",
-                  "Order": 3
-                },
-                {
-                  "Name": "E",
-                  "Value": "",
-                  "Guid": "43deb9f1-b78f-4f00-9271-9895ea9d0548",
-                  "Order": 4
-                },
-                {
-                  "Name": "F",
-                  "Value": "",
-                  "Guid": "3d597632-c6ca-408b-8a26-5eeecab0da03",
-                  "Order": 6
-                },
-                {
-                  "Name": "G",
-                  "Value": "",
-                  "Guid": "07272fff-3885-4c45-9de8-0b3b35ec3a1c",
-                  "Order": 7
-                }
-              ],
-              "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 7,
-            "Guid": "d94adde1-ec06-4fc8-b57a-2d3fb37d308e",
-            "IsMandatory": false,
-            "Label": "Número de productos:",
-            "Order": 2,
-            "NumericFieldId": {
-              "MaxValue": 9999.0
-            }
-          },
-          {
-            "DFormFieldTypeId": 3,
-            "Guid": "51561c92-572f-4b4b-9e32-84d569cfa7b1",
-            "IsMandatory": false,
-            "Label": "Referencia de los productos:",
-            "Order": 3,
-            "TextBoxField": {
-              "HasMultiline": false,
-              "MaxLength": 400
-            }
-          }
-        ],
-        "Order": 2,
-        "IsFork": true,
-        "ParentId": "2",
-        "ParentGuid": "5b56d918-ee76-405e-b5bb-901ccd1ab109",
-        "ForkOrder": 7
-      },
-      {
-        "Name": "CONSECUENCIAS AGRESIÓN : ",
-        "Guid": "2e587f4f-f137-4842-85e2-cffcd8698d7b",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "9ad9bff7-5efc-4cea-a2d8-2b47990ca462",
-            "IsMandatory": true,
-            "Label": "Consecuencias de la agresión:",
-            "Order": 1,
-            "BusinessConceptId": 38,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Sin lesiones aparentes",
-                  "Value": "",
-                  "Guid": "4ef1e6f9-5c9e-4467-a38e-668e5f1d22b0",
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                },
-                {
-                  "Name": "Con lesiones aparentes (sangrado, dificultad al moverse, etc.)",
-                  "Value": "",
-                  "Guid": "a58c1527-f7c5-49d3-be96-eb5e662f86c1",
-                  "Order": 1
-                },
-                {
-                  "Name": "Alteración del estado de la salud (ansiedad, infarto, mareos, desorientación, etc.)",
-                  "Value": "",
-                  "Guid": "f56ac687-fb71-466a-b4d9-6b8ebdd432cf",
-                  "Order": 2
-                },
-                {
-                  "Name": "Pérdida de consciencia / desfallecimiento",
-                  "Value": "",
-                  "Guid": "8bc93613-2f35-4698-b5b2-4cbb12e18cd1",
-                  "Order": 3
-                },
-                {
-                  "Name": "Fallecimiento",
-                  "Value": "",
-                  "Guid": "4356bb3f-797b-44bd-b6a0-c574cedc63f5",
-                  "Order": 4
-                }
-              ]
-            }
-          },
-          {
-            "DFormFieldTypeId": 5,
-            "Guid": "580558df-ab05-450c-a487-be6819bca543",
-            "IsMandatory": false,
-            "Label": "¿Has tenido que realizar alguna maniobra de primeros auxilios?",
-            "Order": 2,
-            "LogicFieldId": {
-              "LabelTrue": "Sí",
-              "LabelFalse": "No",
-              "TrueIsFork": true,
-              "TrueForkGuid": "6c08bee6-edd9-42b4-8ef8-df70c7eeb21b",
-              "TrueForkId": "PRIMEROS AUXILIOS"
-            }
-          }
-        ],
-        "Order": 3,
-        "IsFork": true,
-        "ParentId": "2",
-        "ParentGuid": "5b56d918-ee76-405e-b5bb-901ccd1ab109",
-        "ForkOrder": 7
-      },
-      {
-        "Name": "AUTORES",
-        "Guid": "ce80cd88-56e1-4d10-9304-064245eab808",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 1,
-            "Guid": "3f4e5e05-d5e8-4861-81b5-772dc45545db",
-            "IsMandatory": true,
-            "HelpText": "Información sobre el autor/autores",
-            "Label": "Autores",
-            "Order": 1,
-            "TableRecordLines": [
-              {
-                "TableRecordLineFieldList": [
-                  {
-                    "DFormFieldTypeId": 9,
-                    "Guid": "0620e8f4-5737-4331-a550-e2227f91e4f4",
-                    "IsMandatory": true,
-                    "Label": "Sexo:",
-                    "BusinessConceptId": 9,
-                    "OptionListFieldId": {
-                      "OptionChoicesList": [
-                        {
-                          "Name": "Hombre",
-                          "Value": "",
-                          "Guid": "19aa0c27-af75-4a9e-bb29-81303d597262",
-                          "Order": 1
-                        },
-                        {
-                          "Name": "Mujer",
-                          "Value": "",
-                          "Guid": "160aead0-4fc6-4e1e-87c9-51735d5c7869",
-                          "Order": 2
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "DFormFieldTypeId": 9,
-                    "Guid": "f5498192-bcf0-413d-97dd-d8f66e22c006",
-                    "IsMandatory": false,
-                    "Label": "Edad:",
-                    "Order": 1,
-                    "OptionListFieldId": {
-                      "OptionChoicesList": [
-                        {
-                          "Name": "Menor de edad",
-                          "Value": "",
-                          "Guid": "71d44461-1e42-4631-af06-1263a36b85f7",
-                          "Order": 1,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 18 y 25 años",
-                          "Value": "",
-                          "Guid": "dc21008f-2b89-480b-8076-2ebeaec52fd1",
-                          "Order": 2,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 26 y 35 años",
-                          "Value": "",
-                          "Guid": "b26967ae-2e92-4c67-bb43-03f166274dc1",
-                          "Order": 3,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 36 y 45 años",
-                          "Value": "",
-                          "Guid": "405432f7-53f9-43a5-a913-0660fdf16fa8",
-                          "Order": 4,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 46 y 55 años",
-                          "Value": "",
-                          "Guid": "f9786c1a-c3c5-4840-858c-f202fd61d5d8",
-                          "Order": 5,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Entre 56 y 65 años",
-                          "Value": "",
-                          "Guid": "34268fc5-393a-4fd2-8a39-62f3cda071a9",
-                          "Order": 6,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        },
-                        {
-                          "Name": "Mayor de 65 años",
-                          "Value": "",
-                          "Guid": "a8cf4e88-0e95-4547-8a25-89f18dbf80fd",
-                          "Order": 7,
-                          "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "DFormFieldTypeId": 9,
-                    "Guid": "e04ffa05-2742-48b3-b035-7cbeb7d8b02e",
-                    "IsMandatory": true,
-                    "Label": "Tipología del autor/autores:",
-                    "Order": 2,
-                    "OptionListFieldId": {
-                      "OptionChoicesList": [
-                        {
-                          "Name": "Ocasional",
-                          "Value": "",
-                          "Guid": "3b24ebed-a7d3-4dbf-991b-b422701c7ade",
-                          "Order": 1
-                        },
-                        {
-                          "Name": "Reincidente",
-                          "Value": "",
-                          "Guid": "6d455993-5be2-4be9-bd57-05259d7d6e3f",
-                          "Order": 2
-                        },
-                        {
-                          "Name": "Profesional / Banda organizada",
-                          "Value": "",
-                          "Guid": "a38a52a6-ba5b-4661-97e9-00d4c7d03bae",
-                          "Order": 3
-                        },
-                        {
-                          "Name": "Personal Colaborador Externo",
-                          "Value": "",
-                          "Guid": "698bfdca-0a2d-4755-ae4a-9788a33621cb",
-                          "Order": 4
-                        },
-                        {
-                          "Name": "Personal del Cliente",
-                          "Value": "",
-                          "Guid": "9aa07534-6434-4286-8a7a-b16c9ec0e32e",
-                          "Order": 5
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "DFormFieldTypeId": 7,
-                    "Guid": "943e0f67-20a9-45b3-b0c0-02bb16d4365a",
-                    "IsMandatory": true,
-                    "Label": "Nº de autor/autores",
-                    "Order": 3,
-                    "NumericFieldId": {
-                      "MaxValue": 99999.0
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "Order": 4,
-        "IsFork": true,
-        "ParentId": "2",
-        "ParentGuid": "5b56d918-ee76-405e-b5bb-901ccd1ab109",
-        "ForkOrder": 7
-      },
-      {
-        "Name": "PRIMEROS AUXILIOS",
-        "Guid": "6c08bee6-edd9-42b4-8ef8-df70c7eeb21b",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "8630688e-f6bb-47b8-9717-dd32f7eab13d",
-            "IsMandatory": true,
-            "Label": "Si has tenido que realizar alguna maniobra de primeros auxilios, indica cual:\\t\\t",
-            "Order": 1,
-            "BusinessConceptId": 33,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Maniobra de Heimlich (evitar asfixia)",
-                  "Value": "",
-                  "Guid": "7936b809-ea68-44d2-8454-1dc245fa47e2",
-                  "ForkGuid": "deee9cc6-92e1-4fd6-b0e1-e1588afc1a9b"
-                },
-                {
-                  "Name": "Reanimación Cardiopulmonar (RCP)",
-                  "Value": "",
-                  "Guid": "d4bc4f06-240d-4f2c-8ac2-e68948d5f867",
-                  "Order": 1
-                },
-                {
-                  "Name": "Respiración boca a boca o de salvamento",
-                  "Value": "",
-                  "Guid": "284d1f58-8eca-4e72-b8f9-8435c890285b",
-                  "Order": 2
-                },
-                {
-                  "Name": "Torniquete / compresión de hemorragias",
-                  "Value": "",
-                  "Guid": "c71e2e5e-9e77-473d-b144-b0249bc651a4",
-                  "Order": 3
-                },
-                {
-                  "Name": "Traqueotomía",
-                  "Value": "",
-                  "Guid": "bf6ef63a-eeef-43cc-955c-4b30fd5d4a72",
-                  "Order": 4
-                }
-              ]
-            }
-          }
-        ],
-        "Order": 5,
-        "IsFork": true,
-        "ParentId": "3",
-        "ParentGuid": "2e587f4f-f137-4842-85e2-cffcd8698d7b",
-        "ForkOrder": 7
+        ]
       },
       {
         "Name": "¿CÓMO HA PASADO?",
@@ -872,310 +206,112 @@
         "FieldsList": [
           {
             "DFormFieldTypeId": 6,
-            "Guid": "aae9b07a-9c10-4dbf-acfa-4ec180f0b7d1",
-            "IsMandatory": true,
-            "Label": "El modus operandi ha sido:",
-            "Order": 1,
-            "BusinessConceptId": 2,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Desconocido",
-                  "Value": "",
-                  "Guid": "494647d3-19cf-4789-a32b-6ade32a90765"
-                },
-                {
-                  "Name": "Alicates / Elementos de corte",
-                  "Value": "",
-                  "Guid": "1c45c7ae-ff1f-4761-b072-3c3c153b4cda"
-                },
-                {
-                  "Name": "Gancho desacoplador",
-                  "Value": "",
-                  "Guid": "479cbeea-4b4a-43aa-a185-4d28c8cc5671"
-                },
-                {
-                  "Name": "Imanes",
-                  "Value": "",
-                  "Guid": "11485da9-efe9-4cc0-85c5-1d5ca2627b3e"
-                },
-                {
-                  "Name": "Manipulación manual / carterista / tirón de bolso",
-                  "Value": "",
-                  "Guid": "624ee10c-2a22-4544-aaf2-e7c034871947"
-                },
-                {
-                  "Name": "Objeto contundente",
-                  "Value": "",
-                  "IsSelected": true,
-                  "Guid": "0e148fc3-f0a9-4232-b28a-f2e9b5aae28c"
-                },
-                {
-                  "Name": "Objeto / instrumento punzante",
-                  "Value": "",
-                  "Guid": "e6fee681-b832-4834-a99b-7fa4dfcd7b5d"
-                },
-                {
-                  "Name": "Huida salida de emergencia",
-                  "Value": "",
-                  "Guid": "83ab7a55-95ad-4079-8bf1-6be714f7f6bc",
-                  "Order": 10
-                },
-                {
-                  "Name": "Arma blanca",
-                  "Value": "",
-                  "Guid": "3c5fdad0-e2d4-434b-a26e-0922a58fa961",
-                  "Order": 11
-                },
-                {
-                  "Name": "Arma de fuego",
-                  "Value": "",
-                  "Guid": "a5cacf7c-2883-4f11-a45d-7c26ec18056b",
-                  "Order": 12
-                }
-              ],
-              "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 5,
-            "Guid": "43fe0a67-0655-40ac-930b-f187048d5826",
+            "Guid": "45e1fad9-c8c2-495c-b88e-47482b40c935",
             "IsMandatory": false,
-            "Label": "¿Se ha utilizado algún medio de ocultación?",
-            "Order": 4,
-            "IsFilled": true,
-            "LogicFieldId": {
-              "Value": true,
-              "LabelTrue": "Sí",
-              "LabelFalse": "No",
-              "TrueIsFork": true,
-              "TrueForkGuid": "7c8635c7-01d2-47a9-8aa7-1b785990eed3",
-              "TrueForkId": "MEDIO DE OCULTACIÓN"
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "43fe0a67-0655-40ac-930b-f187048d5826-ab07ce37-cc89-4760-9d47-132da3b4ebf1",
-            "IsMandatory": true,
-            "Label": "El medio de ocultación utilizado:",
-            "Order": 2,
-            "BusinessConceptId": 14,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Bandolera / Mochila / bolso",
-                  "Value": "",
-                  "IsSelected": true,
-                  "Guid": "74820972-8903-4969-8155-8513675b17c6"
-                },
-                {
-                  "Name": "Bolsa de establecimiento comercial",
-                  "Value": "",
-                  "Guid": "8a11a080-045b-4a04-9aab-3189f1bf4864"
-                },
-                {
-                  "Name": "Bolso forrado de aluminio",
-                  "Value": "",
-                  "Guid": "afc7caa4-ea84-4132-bcaf-82a85e916859"
-                },
-                {
-                  "Name": "Carro de bebé",
-                  "Value": "",
-                  "IsSelected": true,
-                  "Guid": "31eec25e-a72b-40b7-ae37-35432fe5ae02"
-                },
-                {
-                  "Name": "Carro de la compra",
-                  "Value": "",
-                  "Guid": "9de7a5cc-d786-4e84-b54f-b2bdf931758d"
-                },
-                {
-                  "Name": "Entre pertenencias",
-                  "Value": "",
-                  "Guid": "665036a8-02ca-40a0-be32-6fb058c39624"
-                },
-                {
-                  "Name": "Caja regalo",
-                  "Value": "",
-                  "Guid": "6f855db4-3140-4c3e-aa07-f096b0a65df5",
-                  "Order": 6
-                }
-              ],
-              "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "248a083f-19ce-4f9e-99f5-21d13c608824",
-            "IsMandatory": true,
-            "Label": "Ha sido detectado mediante:",
+            "Label": "HA SIDO DETECTADO MEDIANTE:",
             "Order": 3,
-            "BusinessConceptId": 29,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
             "OptionListFieldId": {
               "OptionChoicesList": [
                 {
                   "Name": "CCTV",
-                  "Value": "",
-                  "IsSelected": true,
-                  "Guid": "6017e6aa-222d-43bd-a781-21290d3fb263"
+                  "Value": ""
+                },
+                {
+                  "Name": "Control de Accesos",
+                  "Value": ""
                 },
                 {
                   "Name": "Centro de Control",
-                  "Value": "",
-                  "Guid": "cc5b8ac1-2a04-43cb-aa50-5f5140c40227"
+                  "Value": ""
                 },
                 {
                   "Name": "Control Visual",
-                  "Value": "",
-                  "Guid": "196d3c00-9887-4688-a854-85ab7408c530"
+                  "Value": ""
                 },
                 {
-                  "Name": "Sistemas Anti-hurto / RFID",
-                  "Value": "",
-                  "Guid": "f1e88d48-a304-40b9-a25c-3d3219bbafae"
+                  "Name": "Sistemas Anti-intrusión",
+                  "Value": ""
                 },
                 {
-                  "Name": "Aviso de terceras personas",
+                  "Name": "Aviso CRA",
                   "Value": "",
-                  "Guid": "eda10b89-341f-4ae5-acda-73defae5f403"
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Aviso por parte de terceras personas",
+                  "Value": ""
                 }
               ],
               "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           },
           {
             "DFormFieldTypeId": 6,
-            "Guid": "51aad9be-cbd5-4444-a83f-9a549a537ef0",
-            "IsMandatory": true,
-            "Label": "Ha sido detectado por:",
+            "Guid": "cd4ad7e7-be02-4b1a-b118-229f445b62b7",
+            "IsMandatory": false,
+            "Label": "POR:",
             "Order": 4,
-            "BusinessConceptId": 34,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
             "OptionListFieldId": {
               "OptionChoicesList": [
                 {
                   "Name": "Personal de Prosegur",
-                  "Value": "",
-                  "IsSelected": true,
-                  "Guid": "ea33f5de-0600-4178-9062-1783b5a09c2d",
-                  "ForkGuid": "7c8635c7-01d2-47a9-8aa7-1b785990eed3"
+                  "Value": ""
                 },
                 {
                   "Name": "Personal del Cliente",
                   "Value": "",
-                  "Guid": "a92a945e-785f-4d6b-abb4-a1dccd35f6b7",
-                  "ForkGuid": "497b0d2f-737f-44e3-8968-dd54755c9a04",
-                  "ForkId": "DETECTADO PERSONAL DEL CLIENTE",
-                  "IsFork": true
+                  "IsSelected": true
                 },
                 {
                   "Name": "Personal Colaborador Externo",
-                  "Value": "",
-                  "Guid": "8bf1cbb8-0765-46fb-9a9f-2b77dee5678b"
+                  "Value": ""
                 },
                 {
                   "Name": "Personal Ajeno / Terceras Personas",
-                  "Value": "",
-                  "Guid": "cd226ff6-ab2f-4723-935a-070d2e5a154a"
+                  "Value": ""
                 }
               ]
-            }
-          },
-          {
-            "DFormFieldTypeId": 3,
-            "Guid": "51aad9be-cbd5-4444-a83f-9a549a537ef0-e35d833b-4d15-493a-903e-4560c929495e",
-            "IsMandatory": false,
-            "Label": "Si quien lo ha detectado es personal del cliente, indica quién (puesto o cargo):",
-            "Order": 1,
-            "IsHidden": true,
-            "TextBoxField": {
-              "HasMultiline": false,
-              "MaxLength": 400
-            }
-          }
-        ],
-        "Order": 3
-      },
-      {
-        "Name": "MEDIO DE OCULTACIÓN",
-        "Guid": "7c8635c7-01d2-47a9-8aa7-1b785990eed3",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "ab07ce37-cc89-4760-9d47-132da3b4ebf1",
-            "IsMandatory": true,
-            "Label": "El medio de ocultación utilizado:",
-            "Order": 2,
-            "BusinessConceptId": 14,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Bandolera / Mochila / bolso",
-                  "Value": "",
-                  "Guid": "74820972-8903-4969-8155-8513675b17c6"
-                },
-                {
-                  "Name": "Bolsa de establecimiento comercial",
-                  "Value": "",
-                  "Guid": "8a11a080-045b-4a04-9aab-3189f1bf4864"
-                },
-                {
-                  "Name": "Bolso forrado de aluminio",
-                  "Value": "",
-                  "Guid": "afc7caa4-ea84-4132-bcaf-82a85e916859"
-                },
-                {
-                  "Name": "Carro de bebé",
-                  "Value": "",
-                  "Guid": "31eec25e-a72b-40b7-ae37-35432fe5ae02"
-                },
-                {
-                  "Name": "Carro de la compra",
-                  "Value": "",
-                  "Guid": "9de7a5cc-d786-4e84-b54f-b2bdf931758d"
-                },
-                {
-                  "Name": "Entre pertenencias",
-                  "Value": "",
-                  "Guid": "665036a8-02ca-40a0-be32-6fb058c39624"
-                },
-                {
-                  "Name": "Caja regalo",
-                  "Value": "",
-                  "Guid": "6f855db4-3140-4c3e-aa07-f096b0a65df5",
-                  "Order": 6
-                }
-              ],
-              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           }
-        ],
-        "Order": 1,
-        "IsFork": true,
-        "ParentId": "3",
-        "ParentGuid": "c7189a34-4be7-4e55-9e98-54c18febb9b6",
-        "ForkOrder": 1
-      },
-      {
-        "Name": "DETECTADO PERSONAL DEL CLIENTE",
-        "Guid": "497b0d2f-737f-44e3-8968-dd54755c9a04",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 3,
-            "Guid": "e35d833b-4d15-493a-903e-4560c929495e",
-            "IsMandatory": false,
-            "Label": "Si quien lo ha detectado es personal del cliente, indica quién (puesto o cargo):",
-            "Order": 1,
-            "TextBoxField": {
-              "HasMultiline": false,
-              "MaxLength": 400
-            }
-          }
-        ],
-        "Order": 2,
-        "IsFork": true,
-        "ParentId": "3",
-        "ParentGuid": "c7189a34-4be7-4e55-9e98-54c18febb9b6",
-        "ForkOrder": 7
+        ]
       },
       {
         "Name": "¿A QUIÉN SE HA AVISADO?",
@@ -1183,621 +319,174 @@
         "FieldsList": [
           {
             "DFormFieldTypeId": 5,
-            "Guid": "e5b0bf38-95cc-4b72-9648-b9ad6f4cc388",
-            "IsMandatory": true,
-            "Label": "¿Se han avisado a las asistencias?",
-            "Order": 1,
-            "IsFilled": true,
-            "BusinessConceptId": 17,
-            "LogicFieldId": {
-              "Value": true,
-              "LabelTrue": "Sí",
-              "LabelFalse": "No",
-              "TrueIsFork": true,
-              "TrueForkGuid": "05621dee-ff06-42b4-8d00-3d1c6f431c1c",
-              "TrueForkId": "ASISTENCIAS"
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "e5b0bf38-95cc-4b72-9648-b9ad6f4cc388-f07c1517-c112-4ae2-87d8-2ae197b3aa56",
-            "IsMandatory": true,
-            "Label": "Asistencias:",
-            "Order": 2,
-            "BusinessConceptId": 18,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Asistencia sanitaria",
-                  "Value": "",
-                  "IsSelected": true,
-                  "Guid": "ac62586b-565b-4942-a69d-905d708db835"
-                },
-                {
-                  "Name": "Bomberos",
-                  "Value": "",
-                  "Guid": "0d54e878-3c93-4596-bec0-ac1ade558a14"
-                },
-                {
-                  "Name": "Ertzaintza",
-                  "Value": "",
-                  "Guid": "6e7f5c8c-de10-4dc9-a8e0-cb904400545c"
-                },
-                {
-                  "Name": "Guardia Civil",
-                  "Value": "",
-                  "Guid": "e6e13136-bd0c-497e-85de-9d97c3897947"
-                },
-                {
-                  "Name": "Mossos d'esquadra",
-                  "Value": "",
-                  "Guid": "03c516f9-f1b8-419e-a47f-fa87b5748fba"
-                },
-                {
-                  "Name": "Policía Local",
-                  "Value": "",
-                  "Guid": "fa2aa08b-3dcc-4cf7-af00-e3ab55006d41"
-                },
-                {
-                  "Name": "Policía Nacional",
-                  "Value": "",
-                  "IsSelected": true,
-                  "Guid": "9e16b5b2-d899-437c-ac92-8f442593d561"
-                },
-                {
-                  "Name": "Policía Foral de Navarra",
-                  "Value": "",
-                  "Guid": "e339b869-4a22-440a-a1ed-0b589e49bb0c"
-                }
-              ],
-              "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 4,
-            "Guid": "e5b0bf38-95cc-4b72-9648-b9ad6f4cc388-416f4f98-f805-422d-9caf-8d0890006869",
-            "IsMandatory": true,
-            "Label": "Hora de llegada de las asistencias:",
-            "Order": 2,
-            "DatetimeFieldId": {
-              "IsDatetime": true,
-              "IsDate": false,
-              "Value": "2019-08-06T07:45:36Z"
-            }
-          },
-          {
-            "DFormFieldTypeId": 5,
-            "Guid": "5c19a131-44f6-4250-b092-4a9078d1a067",
+            "Guid": "f068086c-6a70-4070-b061-26594aa4a4b2",
             "IsMandatory": false,
-            "Label": "¿Se ha avisado al CGO?",
-            "Order": 4,
-            "BusinessConceptId": 39,
+            "Label": "¿SE AVISA AL CLIENTE?",
+            "Order": 5,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
             "LogicFieldId": {
               "LabelTrue": "Sí",
               "LabelFalse": "No"
-            }
-          },
-          {
-            "DFormFieldTypeId": 5,
-            "Guid": "475d9c61-a982-415c-8549-172645f6c03e",
-            "IsMandatory": false,
-            "Label": "¿Se ha informado al cliente?",
-            "Order": 5,
-            "IsFilled": true,
-            "LogicFieldId": {
-              "Value": true,
-              "LabelTrue": "Sí",
-              "LabelFalse": "No",
-              "TrueIsFork": true,
-              "TrueForkGuid": "494eaea6-c427-4f02-b2ad-3ba55f231cb4",
-              "TrueForkId": "INFORMADO PERSONAL DEL CLIENTE"
-            }
-          },
-          {
-            "DFormFieldTypeId": 3,
-            "Guid": "475d9c61-a982-415c-8549-172645f6c03e-e35d833b-4d15-493a-903e-4560c929495e",
-            "IsMandatory": false,
-            "Label": "Si se ha informado  a personal del cliente, indica a quién (puesto o cargo):",
-            "Order": 1,
-            "IsFilled": true,
-            "TextBoxField": {
-              "HasMultiline": true,
-              "MaxLength": 400,
-              "Value": "xyz"
-            }
-          }
-        ],
-        "Order": 4
-      },
-      {
-        "Name": "ASISTENCIAS",
-        "Guid": "05621dee-ff06-42b4-8d00-3d1c6f431c1c",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "f07c1517-c112-4ae2-87d8-2ae197b3aa56",
-            "IsMandatory": true,
-            "Label": "Asistencias:",
-            "Order": 2,
-            "BusinessConceptId": 18,
+            },
             "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Asistencia sanitaria",
-                  "Value": "",
-                  "Guid": "ac62586b-565b-4942-a69d-905d708db835"
-                },
-                {
-                  "Name": "Bomberos",
-                  "Value": "",
-                  "Guid": "0d54e878-3c93-4596-bec0-ac1ade558a14"
-                },
-                {
-                  "Name": "Ertzaintza",
-                  "Value": "",
-                  "Guid": "6e7f5c8c-de10-4dc9-a8e0-cb904400545c"
-                },
-                {
-                  "Name": "Guardia Civil",
-                  "Value": "",
-                  "Guid": "e6e13136-bd0c-497e-85de-9d97c3897947"
-                },
-                {
-                  "Name": "Mossos d'esquadra",
-                  "Value": "",
-                  "Guid": "03c516f9-f1b8-419e-a47f-fa87b5748fba"
-                },
-                {
-                  "Name": "Policía Local",
-                  "Value": "",
-                  "Guid": "fa2aa08b-3dcc-4cf7-af00-e3ab55006d41"
-                },
-                {
-                  "Name": "Policía Nacional",
-                  "Value": "",
-                  "Guid": "9e16b5b2-d899-437c-ac92-8f442593d561"
-                },
-                {
-                  "Name": "Policía Foral de Navarra",
-                  "Value": "",
-                  "Guid": "e339b869-4a22-440a-a1ed-0b589e49bb0c"
-                }
-              ],
-              "HasMultipleChoice": true
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           },
           {
-            "DFormFieldTypeId": 4,
-            "Guid": "416f4f98-f805-422d-9caf-8d0890006869",
-            "IsMandatory": true,
-            "Label": "Hora de llegada de las asistencias:",
-            "Order": 2,
-            "DatetimeFieldId": {
-              "IsDatetime": true,
-              "IsDate": false
-            }
-          }
-        ],
-        "Order": 1,
-        "IsFork": true,
-        "ParentId": "4",
-        "ParentGuid": "331fb9d3-3a2a-4e27-94f4-78a4f36cda22",
-        "ForkOrder": 1
-      },
-      {
-        "Name": "INFORMADO PERSONAL DEL CLIENTE",
-        "Guid": "494eaea6-c427-4f02-b2ad-3ba55f231cb4",
-        "FieldsList": [
-          {
             "DFormFieldTypeId": 3,
-            "Guid": "e35d833b-4d15-493a-903e-4560c929495e",
+            "Guid": "8cd08121-80b5-4d1c-a9d5-5929197713c1",
             "IsMandatory": false,
-            "Label": "Si se ha informado  a personal del cliente, indica a quién (puesto o cargo):",
-            "Order": 1,
+            "Label": "Si se ha avisado, indica cargo / puesto",
+            "Order": 6,
             "TextBoxField": {
               "HasMultiline": true,
               "MaxLength": 400
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           }
-        ],
-        "Order": 2,
-        "IsFork": true,
-        "ParentId": "4",
-        "ParentGuid": "331fb9d3-3a2a-4e27-94f4-78a4f36cda22",
-        "ForkOrder": 1
+        ]
       },
       {
         "Name": "RESULTADO",
         "Guid": "3599c5ec-690d-4198-ac02-82f0c440a9bf",
         "FieldsList": [
           {
-            "DFormFieldTypeId": 5,
-            "Guid": "fbaa991c-59c3-4fa1-b527-3be7bfbd7505",
-            "IsMandatory": true,
-            "Label": "¿Se efectúa denuncia?",
-            "Order": 4,
-            "IsFilled": true,
-            "BusinessConceptId": 16,
-            "LogicFieldId": {
-              "LabelTrue": "Sí",
-              "LabelFalse": "No",
-              "TrueIsFork": true,
-              "TrueForkGuid": "7f26541c-a35a-4a4a-a97e-a6eb3f4ce6d1",
-              "TrueForkId": "DENUNCIA "
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "fbaa991c-59c3-4fa1-b527-3be7bfbd7505-276bdc82-b33f-4edd-9993-96a0066f78e1",
-            "IsMandatory": true,
-            "Label": " ¿Quién interpone la denuncia?",
-            "Order": 1,
-            "IsHidden": true,
-            "BusinessConceptId": 35,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Personal Prosegur",
-                  "Value": "",
-                  "Guid": "d161f2f0-87f1-41cb-92bf-3864710f6f1a"
-                },
-                {
-                  "Name": "El cliente/establecimiento",
-                  "Value": "",
-                  "Guid": "f6a4b678-1d3c-434e-aff2-7d579da8c43e",
-                  "Order": 1
-                },
-                {
-                  "Name": "Terceras personas",
-                  "Value": "",
-                  "Guid": "8fc9c2c5-d969-492c-ba5c-a3b09ff72b96",
-                  "Order": 2
-                }
-              ],
-              "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "fbaa991c-59c3-4fa1-b527-3be7bfbd7505-f09da730-7f12-4693-9e1d-613f64c7bd03",
-            "IsMandatory": true,
-            "Label": "Denuncia por:",
-            "Order": 2,
-            "IsHidden": true,
-            "BusinessConceptId": 36,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Robo",
-                  "Value": "",
-                  "Guid": "c1a09f19-6968-40ba-80e8-480ab763cc42"
-                },
-                {
-                  "Name": "Hurto",
-                  "Value": "",
-                  "Guid": "12f5b4f2-816f-422a-939d-e6a81e472415",
-                  "Order": 1
-                },
-                {
-                  "Name": "Agresión verbal, amenazas",
-                  "Value": "",
-                  "Guid": "518dcb97-cf2d-48f2-bb03-02ecf679d85c",
-                  "Order": 2
-                },
-                {
-                  "Name": "Agresión física",
-                  "Value": "",
-                  "Guid": "b78fe1a8-282b-471b-a39b-6bc372eafbcd",
-                  "Order": 3
-                },
-                {
-                  "Name": "Estafa",
-                  "Value": "",
-                  "Guid": "463f8fd5-6245-4894-a50f-1e596ef7ddf0",
-                  "Order": 4
-                },
-                {
-                  "Name": "Daños",
-                  "Value": "",
-                  "Guid": "d090571a-eb83-4579-9d60-37c633c14b99",
-                  "Order": 5
-                }
-              ],
-              "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "fbaa991c-59c3-4fa1-b527-3be7bfbd7505-d38ed82f-c889-4db4-90e6-31a2bd476278",
-            "IsMandatory": false,
-            "Label": "Denuncia efectuada en:",
-            "Order": 3,
-            "IsHidden": true,
-            "BusinessConceptId": 37,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "El establecimiento / centro / instalación",
-                  "Value": "",
-                  "Guid": "b35d0316-757e-46b2-bb3e-6916b2a8cdad"
-                },
-                {
-                  "Name": "Dependencias Policiales ",
-                  "Value": "",
-                  "Guid": "bf090590-69c0-41a9-a833-f0c0a716ce1b",
-                  "Order": 3
-                }
-              ]
-            }
-          },
-          {
-            "DFormFieldTypeId": 3,
-            "Guid": "fbaa991c-59c3-4fa1-b527-3be7bfbd7505-addbddb7-1074-4940-8c00-d11af92317af",
-            "IsMandatory": false,
-            "Label": "Nº de la denuncia:",
-            "Order": 5,
-            "IsHidden": true,
-            "TextBoxField": {
-              "HasMultiline": false,
-              "MaxLength": 400
-            }
-          },
-          {
-            "DFormFieldTypeId": 5,
-            "Guid": "fbaa991c-59c3-4fa1-b527-3be7bfbd7505-a82ab4a5-0246-48a4-9677-4b4fa684e7e5",
-            "IsMandatory": false,
-            "Label": "¿Citación para juicio rápido?",
-            "Order": 4,
-            "IsHidden": true,
-            "BusinessConceptId": 42,
-            "LogicFieldId": {
-              "LabelTrue": "Sí",
-              "LabelFalse": "No",
-              "TrueIsFork": true,
-              "TrueForkGuid": "500dd646-025f-4cba-8219-d39fc8e87b04",
-              "TrueForkId": "JUICIO RÁPIDO"
-            }
-          },
-          {
-            "DFormFieldTypeId": 4,
-            "Guid": "fbaa991c-59c3-4fa1-b527-3be7bfbd7505-a82ab4a5-0246-48a4-9677-4b4fa684e7e5-fdd7c833-2322-4cf2-bb3a-93d93176a7a9",
-            "IsMandatory": false,
-            "Label": "Fecha y hora para la celebración del juicio rápido:",
-            "Order": 1,
-            "IsHidden": true,
-            "DatetimeFieldId": {
-              "IsDatetime": true,
-              "IsDate": false
-            }
-          },
-          {
             "DFormFieldTypeId": 6,
             "Guid": "1683931a-4f56-4765-be1f-89100eed60ed",
-            "IsMandatory": true,
-            "Label": "Resultado:",
+            "IsMandatory": false,
+            "Label": "RESULTADO",
             "Order": 1,
-            "BusinessConceptId": 3,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
             "OptionListFieldId": {
               "OptionChoicesList": [
                 {
-                  "Name": "Abona el producto y abandona la instalación",
+                  "Name": "Se impide el acceso a la persona",
+                  "Value": ""
+                },
+                {
+                  "Name": "Se da autorización provisional",
                   "Value": "",
                   "IsSelected": true
                 },
                 {
-                  "Name": "A disposición de FFCCS",
-                  "Value": ""
-                },
-                {
-                  "Name": "Desalojo del autor/autores",
-                  "Value": ""
-                },
-                {
-                  "Name": "Huida con recuperación de artículo/os",
-                  "Value": ""
-                },
-                {
-                  "Name": "Huida sin recuperación de artículo/os",
-                  "Value": ""
-                },
-                {
-                  "Name": "Detención",
+                  "Name": "Se crea nueva autorización",
                   "Value": ""
                 }
               ],
               "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           },
           {
             "DFormFieldTypeId": 3,
             "Guid": "e97e5e66-b9b3-4a3c-82d6-f93b592cba7e",
             "IsMandatory": false,
-            "HelpText": "Puedes utilizar el micrófono del teclado, es más rápido y funcional. Gracias.",
-            "Label": "Observaciones:",
+            "Label": "OBSERVACIONES",
             "Order": 2,
-            "BusinessConceptId": 52,
             "TextBoxField": {
-              "HasMultiline": true,
+              "HasMultiline": false,
               "MaxLength": 400
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           },
           {
             "DFormFieldTypeId": 3,
             "Guid": "8f948eb3-9516-4e20-852d-e1216ed6f100",
             "IsMandatory": false,
-            "HelpText": "Puedes utilizar el micrófono del teclado, es más rápido y funcional. Gracias.",
-            "Label": "Medidas adoptadas:",
+            "Label": "MEDIDAS ADOPTADAS",
             "Order": 3,
-            "IsFilled": true,
-            "BusinessConceptId": 53,
-            "TextBoxField": {
-              "HasMultiline": false,
-              "MaxLength": 400,
-              "Value": "abc"
-            }
-          }
-        ],
-        "Order": 5
-      },
-      {
-        "Name": "DENUNCIA ",
-        "Guid": "7f26541c-a35a-4a4a-a97e-a6eb3f4ce6d1",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "276bdc82-b33f-4edd-9993-96a0066f78e1",
-            "IsMandatory": true,
-            "Label": " ¿Quién interpone la denuncia?",
-            "Order": 1,
-            "BusinessConceptId": 35,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Personal Prosegur",
-                  "Value": "",
-                  "Guid": "d161f2f0-87f1-41cb-92bf-3864710f6f1a"
-                },
-                {
-                  "Name": "El cliente/establecimiento",
-                  "Value": "",
-                  "Guid": "f6a4b678-1d3c-434e-aff2-7d579da8c43e",
-                  "Order": 1
-                },
-                {
-                  "Name": "Terceras personas",
-                  "Value": "",
-                  "Guid": "8fc9c2c5-d969-492c-ba5c-a3b09ff72b96",
-                  "Order": 2
-                }
-              ],
-              "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "f09da730-7f12-4693-9e1d-613f64c7bd03",
-            "IsMandatory": true,
-            "Label": "Denuncia por:",
-            "Order": 2,
-            "BusinessConceptId": 36,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "Robo",
-                  "Value": "",
-                  "Guid": "c1a09f19-6968-40ba-80e8-480ab763cc42"
-                },
-                {
-                  "Name": "Hurto",
-                  "Value": "",
-                  "Guid": "12f5b4f2-816f-422a-939d-e6a81e472415",
-                  "Order": 1
-                },
-                {
-                  "Name": "Agresión verbal, amenazas",
-                  "Value": "",
-                  "Guid": "518dcb97-cf2d-48f2-bb03-02ecf679d85c",
-                  "Order": 2
-                },
-                {
-                  "Name": "Agresión física",
-                  "Value": "",
-                  "Guid": "b78fe1a8-282b-471b-a39b-6bc372eafbcd",
-                  "Order": 3
-                },
-                {
-                  "Name": "Estafa",
-                  "Value": "",
-                  "Guid": "463f8fd5-6245-4894-a50f-1e596ef7ddf0",
-                  "Order": 4
-                },
-                {
-                  "Name": "Daños",
-                  "Value": "",
-                  "Guid": "d090571a-eb83-4579-9d60-37c633c14b99",
-                  "Order": 5
-                }
-              ],
-              "HasMultipleChoice": true
-            }
-          },
-          {
-            "DFormFieldTypeId": 6,
-            "Guid": "d38ed82f-c889-4db4-90e6-31a2bd476278",
-            "IsMandatory": false,
-            "Label": "Denuncia efectuada en:",
-            "Order": 3,
-            "BusinessConceptId": 37,
-            "OptionListFieldId": {
-              "OptionChoicesList": [
-                {
-                  "Name": "El establecimiento / centro / instalación",
-                  "Value": "",
-                  "Guid": "b35d0316-757e-46b2-bb3e-6916b2a8cdad"
-                },
-                {
-                  "Name": "Dependencias Policiales ",
-                  "Value": "",
-                  "Guid": "bf090590-69c0-41a9-a833-f0c0a716ce1b",
-                  "Order": 3
-                }
-              ]
-            }
-          },
-          {
-            "DFormFieldTypeId": 3,
-            "Guid": "addbddb7-1074-4940-8c00-d11af92317af",
-            "IsMandatory": false,
-            "Label": "Nº de la denuncia:",
-            "Order": 5,
             "TextBoxField": {
               "HasMultiline": false,
               "MaxLength": 400
-            }
-          },
-          {
-            "DFormFieldTypeId": 5,
-            "Guid": "a82ab4a5-0246-48a4-9677-4b4fa684e7e5",
-            "IsMandatory": false,
-            "Label": "¿Citación para juicio rápido?",
-            "Order": 4,
-            "BusinessConceptId": 42,
-            "LogicFieldId": {
-              "LabelTrue": "Sí",
-              "LabelFalse": "No",
-              "TrueIsFork": true,
-              "TrueForkGuid": "500dd646-025f-4cba-8219-d39fc8e87b04",
-              "TrueForkId": "JUICIO RÁPIDO"
-            }
-          }
-        ],
-        "Order": 1,
-        "IsFork": true,
-        "ParentId": "5",
-        "ParentGuid": "3599c5ec-690d-4198-ac02-82f0c440a9bf",
-        "ForkOrder": 7
-      },
-      {
-        "Name": "JUICIO RÁPIDO",
-        "Guid": "500dd646-025f-4cba-8219-d39fc8e87b04",
-        "FieldsList": [
-          {
-            "DFormFieldTypeId": 4,
-            "Guid": "fdd7c833-2322-4cf2-bb3a-93d93176a7a9",
-            "IsMandatory": false,
-            "Label": "Fecha y hora para la celebración del juicio rápido:",
-            "Order": 1,
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
             "DatetimeFieldId": {
-              "IsDatetime": true,
+              "IsDatetime": false,
               "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           }
-        ],
-        "Order": 2,
-        "IsFork": true,
-        "ParentId": "1",
-        "ParentGuid": "7f26541c-a35a-4a4a-a97e-a6eb3f4ce6d1",
-        "ForkOrder": 7
+        ]
       },
       {
         "Name": "ADJUNTAR ARCHIVO",
@@ -1807,33 +496,34 @@
             "DFormFieldTypeId": 10,
             "Guid": "3ea8335a-84c5-4c13-b2a4-4631dd2ac18d",
             "IsMandatory": false,
-            "HelpText": "Recuerda que no se pueden adjuntar fotografías de personas.\\t",
             "Label": "Si quieres, para completar tu informe puedes adjuntar una fotografía y/o archivo. Muchas gracias por tu colaboración y buen servicio!",
-            "Order": 1
-          },
-          {
-            "DFormFieldTypeId": 8,
-            "Guid": "b1d059c6-b00c-433e-bdc5-4d6afab21d6f",
-            "IsMandatory": false,
-            "Label": "Adjunto",
-            "Order": 2,
+            "Order": 1,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
             "AttachmentFieldId": {
-              "IsOnlyFile": true,
-              "IsOnlyPicture": true,
               "AttachmentLines": {
-                "AttachmentLineFieldList": [
-                  {
-                    "Value": "13030",
-                    "FileName": "Libro1.ods"
-                  }
-                ]
+                "AttachmentLineFieldList": []
               }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
             }
           }
-        ],
-        "Order": 6
+        ]
       }
     ],
-    "FORMINSTANCEWEIGHTINGS": []
+    "FORMINSTANCEWEIGHTINGS": " "
   }
 }

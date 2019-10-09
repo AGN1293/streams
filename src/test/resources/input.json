@@ -1,1 +1,1165 @@
-{"schema":{"type":"struct","fields":[{"type":"string","optional":true,"field":"POS"},{"type":"string","optional":true,"field":"TENANT_ID"},{"type":"string","optional":true,"field":"ID"},{"type":"string","optional":true,"field":"FORMINSTANCEFIELDS"},{"type":"string","optional":true,"field":"FORMINSTANCEWEIGHTINGS"}],"optional":false},"payload":{"POS":"SCN1434808043","TENANT_ID":"83","ID":"1352418","FORMINSTANCEFIELDS":"[{\"Name\":\"¿Cuándo y dónde?\",\"Guid\":\"aec2a621-6f86-40a6-ab1f-6c20ebee575c\",\"FieldsList\":[{\"DFormFieldTypeId\":4,\"Guid\":\"e42dfd02-29a4-4478-9507-3ed5970ffe1b\",\"IsMandatory\":true,\"Label\":\"Fecha y hora de  la reunión.\",\"Order\":1,\"DatetimeFieldId\":{\"IsDatetime\":true,\"IsDate\":false,\"Value\":\"2019-09-18T09:14:41Z\"}},{\"DFormFieldTypeId\":9,\"Guid\":\"6a58b8a1-a037-480f-97ac-3775c05c5571\",\"IsMandatory\":false,\"Label\":\"Reunión mantenida en:\",\"Order\":2,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Dependencias del cliente\",\"Value\":\"\",\"IsSelected\":true,\"Guid\":\"345ab7d1-b72e-4e49-a1d5-f5b549940d1a\",\"Order\":1},{\"Name\":\"Delegación de Prosegur\",\"Value\":\"\",\"Guid\":\"20183f2a-7ea2-42a3-b640-72c87141d64e\",\"Order\":2}]}}],\"Order\":1},{\"Name\":\"¿Quién?\",\"Guid\":\"33c31c3c-3ec1-4a21-a6ac-6001b8b83451\",\"FieldsList\":[{\"DFormFieldTypeId\":1,\"Guid\":\"1d9da850-9c47-42e0-9f7f-9c6adec8b7a9\",\"IsMandatory\":true,\"HelpText\":\"Qué personas asisten a la reunión.\",\"Label\":\"Asistentes a la reunión\",\"Order\":1,\"TableRecordLines\":[{\"TableRecordLineFieldList\":[{\"DFormFieldTypeId\":3,\"Guid\":\"fa7577d0-309e-42d3-89df-bc2d5057c6dd\",\"IsMandatory\":true,\"HelpText\":\"Recuerda utilizar mayúscula y minúscula. No solo mayúscula.\",\"Label\":\"Nombre y Apellidos \",\"TextBoxField\":{\"HasMultiline\":false,\"MaxLength\":400}},{\"DFormFieldTypeId\":3,\"Guid\":\"2ab24e85-c08b-4660-a768-2aeb51d791d1\",\"IsMandatory\":true,\"HelpText\":\"Recuerda utilizar mayúscula y minúscula. No solo mayúscula.as.\",\"Label\":\"Cargo/puesto\",\"IsVisibleInTableRecordResume\":true,\"Order\":1,\"TextBoxField\":{\"HasMultiline\":false,\"MaxLength\":400}},{\"DFormFieldTypeId\":3,\"Guid\":\"c08e27a0-a64a-4fd0-8866-08991acce2d1\",\"IsMandatory\":true,\"HelpText\":\"Recuerda utilizar mayúscula y minúscula. No solo mayúscula.\",\"Label\":\"Empresa\",\"Order\":2,\"TextBoxField\":{\"HasMultiline\":false,\"MaxLength\":400}}]},{\"TableRecordLineFieldList\":[{\"DFormFieldTypeId\":3,\"Guid\":\"fa7577d0-309e-42d3-89df-bc2d5057c6dd\",\"IsMandatory\":true,\"HelpText\":\"Recuerda utilizar mayúscula y minúscula. No solo mayúscula.\",\"Label\":\"Nombre y Apellidos \",\"TextBoxField\":{\"HasMultiline\":false,\"MaxLength\":400,\"Value\":\"federico muller\"}},{\"DFormFieldTypeId\":3,\"Guid\":\"2ab24e85-c08b-4660-a768-2aeb51d791d1\",\"IsMandatory\":true,\"HelpText\":\"Recuerda utilizar mayúscula y minúscula. No solo mayúscula.as.\",\"Label\":\"Cargo/puesto\",\"Order\":1,\"TextBoxField\":{\"HasMultiline\":false,\"MaxLength\":400,\"Value\":\"JP\"}},{\"DFormFieldTypeId\":3,\"Guid\":\"c08e27a0-a64a-4fd0-8866-08991acce2d1\",\"IsMandatory\":true,\"HelpText\":\"Recuerda utilizar mayúscula y minúscula. No solo mayúscula.\",\"Label\":\"Empresa\",\"Order\":2,\"TextBoxField\":{\"HasMultiline\":false,\"MaxLength\":400,\"Value\":\"PROSEGUR\"}}]}]}],\"Order\":2},{\"Name\":\"¿Qué?\",\"Guid\":\"4039fae3-67d9-445f-93cb-bf3eea849849\",\"FieldsList\":[{\"DFormFieldTypeId\":6,\"Guid\":\"65647d4e-16c8-4efb-a0f6-da3a88e162a5\",\"IsMandatory\":false,\"Label\":\"¿Se han resuelto los puntos pendientes de la anterior reunión?\",\"Order\":1,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Sí\",\"Value\":\"\",\"IsSelected\":true,\"Guid\":\"bd2c0c03-2196-4568-b351-162dec7d78d3\",\"Order\":3,\"ForkGuid\":\"8cf70a20-bb90-412f-b86f-9fc3764609ef\",\"ForkId\":\"Puntos pendientes de resolución\",\"IsFork\":true},{\"Name\":\"No\",\"Value\":\"\",\"Guid\":\"d7ecebbb-2bca-486f-b4b4-31e92105c9f1\",\"Order\":4,\"ForkGuid\":\"8cf70a20-bb90-412f-b86f-9fc3764609ef\"},{\"Name\":\"No aplica\",\"Value\":\"\",\"Guid\":\"581e6df4-9aae-4359-bce3-b885397e6eaa\",\"Order\":5,\"ForkGuid\":\"8cf70a20-bb90-412f-b86f-9fc3764609ef\"}]}},{\"DFormFieldTypeId\":3,\"Guid\":\"65647d4e-16c8-4efb-a0f6-da3a88e162a5-83b6cb5b-b574-4c0c-9135-4f4c3c404221\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Puntos pendientes de resolución\",\"Order\":1,\"IsFilled\":true,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":1500,\"Value\":\"pentditen\"}},{\"DFormFieldTypeId\":5,\"Guid\":\"5e941430-f1a8-48a5-a12c-45bcfa312fcb\",\"IsMandatory\":false,\"Label\":\"¿Existen reclamaciones y/o quejas por parte del cliente?\",\"Order\":2,\"LogicFieldId\":{\"LabelTrue\":\"Sí\",\"LabelFalse\":\"No\",\"TrueIsFork\":true,\"TrueForkGuid\":\"7b9adc9d-e480-4e4e-8a13-d790578abceb\",\"TrueForkId\":\"Sobre 1\"}},{\"DFormFieldTypeId\":6,\"Guid\":\"5e941430-f1a8-48a5-a12c-45bcfa312fcb-e3cbeb52-2c74-481b-b3ae-9028047c4423\",\"IsMandatory\":false,\"Label\":\"Sobre \",\"Order\":1,\"IsHidden\":true,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Soporte Tecnología\",\"Value\":\"\",\"Guid\":\"a579f7b1-80c4-48a5-956e-a21fd9fba978\",\"Order\":2,\"ForkGuid\":\"a4413ed1-cf3b-4745-ad5b-156bad1a0634\",\"ForkId\":\"Soporte Tecnología\",\"IsFork\":true},{\"Name\":\"Soporte Operaciones\",\"Value\":\"\",\"Guid\":\"768e672f-48c8-4c26-9cfa-f62423b28b46\",\"Order\":4,\"ForkGuid\":\"9774d1d6-ce6f-4982-9ea5-13f6e48af534\",\"ForkId\":\"Soporte Operaciones\",\"IsFork\":true},{\"Name\":\"Soporte Comercial\",\"Value\":\"\",\"Guid\":\"5f106a41-5e3f-458a-8483-f90eea74acfd\",\"Order\":5,\"ForkGuid\":\"0d9cb6d6-7d3f-4c42-a3e4-3675bc0a3d80\",\"ForkId\":\"Soporte Comercial\",\"IsFork\":true}],\"HasMultipleChoice\":true}},{\"DFormFieldTypeId\":6,\"Guid\":\"5e941430-f1a8-48a5-a12c-45bcfa312fcb-e3cbeb52-2c74-481b-b3ae-9028047c4423-41b14477-b808-46df-85de-8cbb8b3cf61e\",\"IsMandatory\":false,\"Label\":\"Soporte Tecnología\",\"Order\":3,\"IsHidden\":true,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Mantenimiento\",\"Value\":\"\",\"Guid\":\"8cd13d19-93bd-45a4-8b0a-dd8a0962cc44\",\"Order\":4,\"ForkGuid\":\"0d9cb6d6-7d3f-4c42-a3e4-3675bc0a3d80\"},{\"Name\":\"Resolución de incidencias\",\"Value\":\"\",\"Guid\":\"f52cdfa5-7577-4470-b574-be5382e84eef\",\"Order\":5},{\"Name\":\"Tiempo de resolución ante incidencias\",\"Value\":\"\",\"Guid\":\"8ee44e37-34f5-498d-8eb8-bf94d491fbbd\",\"Order\":6},{\"Name\":\"Attención Central receptora de Alarmas C.R.A.\",\"Value\":\"\",\"Guid\":\"52a3ea6f-75dd-4bb6-879e-d1228e601ea6\",\"Order\":7}],\"HasMultipleChoice\":true}},{\"DFormFieldTypeId\":3,\"Guid\":\"5e941430-f1a8-48a5-a12c-45bcfa312fcb-e3cbeb52-2c74-481b-b3ae-9028047c4423-d5ed7be6-6467-4416-83ca-9ba5dd9f06ff\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Soporte  tecnología - Descripción de los hechos por los que el Cliente realiza la reclamación. \",\"Order\":2,\"IsHidden\":true,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":15000}},{\"DFormFieldTypeId\":6,\"Guid\":\"5e941430-f1a8-48a5-a12c-45bcfa312fcb-e3cbeb52-2c74-481b-b3ae-9028047c4423-1a1b3277-c17a-4928-b7f4-4b90bc71ca43\",\"IsMandatory\":false,\"Label\":\"Soporte Operaciones\",\"Order\":2,\"IsHidden\":true,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Operativa\",\"Value\":\"\",\"Guid\":\"7fdf1836-065a-4d1d-b234-6b4fd1393ac9\",\"Order\":3},{\"Name\":\"Resolución de descubiertos\",\"Value\":\"\",\"Guid\":\"de2decaf-e343-403e-bc5e-240c471292a4\",\"Order\":3},{\"Name\":\"Personal (actitud, eficiencia, conocimiento operativa, desvinculaciones, etc.)\",\"Value\":\"\",\"Guid\":\"971d94c7-30ff-4de7-9e53-bb63569b02fe\",\"Order\":4},{\"Name\":\"Reporting de novedades y tareas\",\"Value\":\"\",\"Guid\":\"6e72bc3e-bb98-4e0b-a9e9-7345d235bd78\",\"Order\":5},{\"Name\":\"Escaso volumen de inspecciones realizadas\",\"Value\":\"\",\"Guid\":\"912c470d-9f96-4b36-9aed-70ec0b02e6ba\",\"Order\":6},{\"Name\":\"Escasez reuniones/visitas\",\"Value\":\"\",\"Guid\":\"cc6355e7-719e-4886-833a-167db82ad9cb\",\"Order\":7},{\"Name\":\"Resolución de incidencias\",\"Value\":\"\",\"Guid\":\"d7a5343c-8f51-4804-b506-892c9c780418\",\"Order\":8},{\"Name\":\"Tiempos de respuesta servicio movilidad\",\"Value\":\"\",\"Guid\":\"5c3ffd1c-cb2a-488c-b288-297bc4962d09\",\"Order\":9}],\"HasMultipleChoice\":true}},{\"DFormFieldTypeId\":3,\"Guid\":\"5e941430-f1a8-48a5-a12c-45bcfa312fcb-e3cbeb52-2c74-481b-b3ae-9028047c4423-2a2dd2a6-d8ff-44b2-a933-ee1507527445\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Soporte Operaciones -Descripción de los hechos por los que el Cliente realiza la reclamación.\",\"Order\":2,\"IsHidden\":true,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":15000}},{\"DFormFieldTypeId\":6,\"Guid\":\"5e941430-f1a8-48a5-a12c-45bcfa312fcb-e3cbeb52-2c74-481b-b3ae-9028047c4423-a0ead2aa-cd5e-404d-a466-2e88b7a0e45b\",\"IsMandatory\":false,\"Label\":\"Soporte Comercial\",\"Order\":3,\"IsHidden\":true,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Incidencias con la facturación\",\"Value\":\"\",\"Guid\":\"78396f2b-0f6e-4706-91fc-0138e93e48d1\",\"Order\":1},{\"Name\":\"Escasez reuniones/visitas\",\"Value\":\"\",\"Guid\":\"7225e933-4d62-4222-9d5e-7c47e19068a3\",\"Order\":2},{\"Name\":\"No se atienden peticiones\",\"Value\":\"\",\"Guid\":\"628f67e8-5089-4671-8c83-6bd7cdd9d041\",\"Order\":3}],\"HasMultipleChoice\":true}},{\"DFormFieldTypeId\":3,\"Guid\":\"5e941430-f1a8-48a5-a12c-45bcfa312fcb-e3cbeb52-2c74-481b-b3ae-9028047c4423-adfee6c2-79f3-41c1-a0ef-0bff6d8f2e6b\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Soporte Comercial - Descripción de los hechos por los que el Cliente realiza la reclamación. \",\"Order\":2,\"IsHidden\":true,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":15000}},{\"DFormFieldTypeId\":5,\"Guid\":\"b98d8ef4-4f69-444d-8d4c-195ae31de97b\",\"IsMandatory\":false,\"Label\":\"¿Existen requerimientos y/o necesidades por parte del cliente?\",\"Order\":3,\"IsFilled\":true,\"LogicFieldId\":{\"Value\":true,\"LabelTrue\":\"Sí\",\"LabelFalse\":\"No\",\"TrueIsFork\":true,\"TrueForkGuid\":\"39c881ae-e70e-425c-be2d-67da52202178\",\"TrueForkId\":\"¿Cúales?\"}},{\"DFormFieldTypeId\":6,\"Guid\":\"b98d8ef4-4f69-444d-8d4c-195ae31de97b-e017d96a-2083-4f69-8a1e-c07d4bbdb5bf\",\"IsMandatory\":false,\"Label\":\"¿Cúales?\",\"Order\":1,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Solicitud  ampliacion/reducción del servicio de vigilancia\",\"Value\":\"\",\"Guid\":\"5ef89b6f-8c5a-4d39-98d6-60a9eacec9d4\",\"Order\":1,\"ForkGuid\":\"8cf70a20-bb90-412f-b86f-9fc3764609ef\"},{\"Name\":\"Solicitud  cambio operativa\",\"Value\":\"\",\"IsSelected\":true,\"Guid\":\"26eb13f9-e872-422a-a5a1-66adea54e275\",\"Order\":2},{\"Name\":\"Solicitud  cambio de personal\",\"Value\":\"\",\"Guid\":\"13d76318-088c-48c0-8c1b-a26c9483477d\",\"Order\":3},{\"Name\":\"Solicitud  cambio medios auxiliares\",\"Value\":\"\",\"IsSelected\":true,\"Guid\":\"f6e3e7cc-5145-403a-ae93-1c12fedb348f\",\"Order\":4},{\"Name\":\"Solicitud de contratación de otros servicios\",\"Value\":\"\",\"Guid\":\"de52d463-d8d5-4ca2-96c2-bca8ad2dc232\",\"Order\":5}],\"HasMultipleChoice\":true}},{\"DFormFieldTypeId\":3,\"Guid\":\"b98d8ef4-4f69-444d-8d4c-195ae31de97b-fae09a89-15ad-42ed-94ea-9c79ec7b6688\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Observaciones sobre los requerimientos \",\"Order\":2,\"IsFilled\":true,\"NotVisibleOnCustomer\":true,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":15000,\"Value\":\"bla bla\"}},{\"DFormFieldTypeId\":4,\"Guid\":\"0509d089-1e35-49f7-9e5e-1d875739ec3b\",\"IsMandatory\":true,\"Label\":\"Hora finalización de la reunión\",\"Order\":4,\"DatetimeFieldId\":{\"IsDatetime\":true,\"IsDate\":false,\"Value\":\"2019-09-18T09:16:35Z\"}}],\"Order\":3},{\"Name\":\"Próxima reunión\",\"Guid\":\"c6dda193-588c-48ee-a703-52568f11b4d1\",\"FieldsList\":[{\"DFormFieldTypeId\":4,\"Guid\":\"32d0c393-ed83-4518-b8b8-32d1803b2208\",\"IsMandatory\":false,\"Label\":\"La próxima reunión se celebrará:\",\"Order\":1,\"DatetimeFieldId\":{\"IsDatetime\":true,\"IsDate\":false,\"Value\":\"2019-09-20T09:15:41Z\"}}],\"Order\":4,\"ParentId\":\"3\",\"ForkOrder\":4},{\"Name\":\"Puntos pendientes de resolución\",\"Guid\":\"8cf70a20-bb90-412f-b86f-9fc3764609ef\",\"FieldsList\":[{\"DFormFieldTypeId\":3,\"Guid\":\"83b6cb5b-b574-4c0c-9135-4f4c3c404221\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Puntos pendientes de resolución\",\"Order\":1,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":1500}}],\"Order\":1,\"IsFork\":true,\"ParentId\":\"3\",\"ParentGuid\":\"4039fae3-67d9-445f-93cb-bf3eea849849\",\"ForkOrder\":4},{\"Name\":\"¿Cúales?\",\"Guid\":\"39c881ae-e70e-425c-be2d-67da52202178\",\"FieldsList\":[{\"DFormFieldTypeId\":6,\"Guid\":\"e017d96a-2083-4f69-8a1e-c07d4bbdb5bf\",\"IsMandatory\":false,\"Label\":\"¿Cúales?\",\"Order\":1,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Solicitud  ampliacion/reducción del servicio de vigilancia\",\"Value\":\"\",\"Guid\":\"5ef89b6f-8c5a-4d39-98d6-60a9eacec9d4\",\"Order\":1,\"ForkGuid\":\"8cf70a20-bb90-412f-b86f-9fc3764609ef\"},{\"Name\":\"Solicitud  cambio operativa\",\"Value\":\"\",\"Guid\":\"26eb13f9-e872-422a-a5a1-66adea54e275\",\"Order\":2},{\"Name\":\"Solicitud  cambio de personal\",\"Value\":\"\",\"Guid\":\"13d76318-088c-48c0-8c1b-a26c9483477d\",\"Order\":3},{\"Name\":\"Solicitud  cambio medios auxiliares\",\"Value\":\"\",\"Guid\":\"f6e3e7cc-5145-403a-ae93-1c12fedb348f\",\"Order\":4},{\"Name\":\"Solicitud de contratación de otros servicios\",\"Value\":\"\",\"Guid\":\"de52d463-d8d5-4ca2-96c2-bca8ad2dc232\",\"Order\":5}],\"HasMultipleChoice\":true}},{\"DFormFieldTypeId\":3,\"Guid\":\"fae09a89-15ad-42ed-94ea-9c79ec7b6688\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Observaciones sobre los requerimientos \",\"Order\":2,\"NotVisibleOnCustomer\":true,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":15000}}],\"Order\":2,\"IsFork\":true,\"ParentId\":\"3\",\"ParentGuid\":\"4039fae3-67d9-445f-93cb-bf3eea849849\",\"ForkOrder\":5},{\"Name\":\"Sobre 1\",\"Guid\":\"7b9adc9d-e480-4e4e-8a13-d790578abceb\",\"FieldsList\":[{\"DFormFieldTypeId\":6,\"Guid\":\"e3cbeb52-2c74-481b-b3ae-9028047c4423\",\"IsMandatory\":false,\"Label\":\"Sobre \",\"Order\":1,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Soporte Tecnología\",\"Value\":\"\",\"Guid\":\"a579f7b1-80c4-48a5-956e-a21fd9fba978\",\"Order\":2,\"ForkGuid\":\"a4413ed1-cf3b-4745-ad5b-156bad1a0634\",\"ForkId\":\"Soporte Tecnología\",\"IsFork\":true},{\"Name\":\"Soporte Operaciones\",\"Value\":\"\",\"Guid\":\"768e672f-48c8-4c26-9cfa-f62423b28b46\",\"Order\":4,\"ForkGuid\":\"9774d1d6-ce6f-4982-9ea5-13f6e48af534\",\"ForkId\":\"Soporte Operaciones\",\"IsFork\":true},{\"Name\":\"Soporte Comercial\",\"Value\":\"\",\"Guid\":\"5f106a41-5e3f-458a-8483-f90eea74acfd\",\"Order\":5,\"ForkGuid\":\"0d9cb6d6-7d3f-4c42-a3e4-3675bc0a3d80\",\"ForkId\":\"Soporte Comercial\",\"IsFork\":true}],\"HasMultipleChoice\":true}}],\"Order\":3,\"IsFork\":true,\"ParentId\":\"3\",\"ParentGuid\":\"4039fae3-67d9-445f-93cb-bf3eea849849\",\"ForkOrder\":4},{\"Name\":\"Soporte Operaciones\",\"Guid\":\"9774d1d6-ce6f-4982-9ea5-13f6e48af534\",\"FieldsList\":[{\"DFormFieldTypeId\":6,\"Guid\":\"1a1b3277-c17a-4928-b7f4-4b90bc71ca43\",\"IsMandatory\":false,\"Label\":\"Soporte Operaciones\",\"Order\":2,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Operativa\",\"Value\":\"\",\"Guid\":\"7fdf1836-065a-4d1d-b234-6b4fd1393ac9\",\"Order\":3},{\"Name\":\"Resolución de descubiertos\",\"Value\":\"\",\"Guid\":\"de2decaf-e343-403e-bc5e-240c471292a4\",\"Order\":3},{\"Name\":\"Personal (actitud, eficiencia, conocimiento operativa, desvinculaciones, etc.)\",\"Value\":\"\",\"Guid\":\"971d94c7-30ff-4de7-9e53-bb63569b02fe\",\"Order\":4},{\"Name\":\"Reporting de novedades y tareas\",\"Value\":\"\",\"Guid\":\"6e72bc3e-bb98-4e0b-a9e9-7345d235bd78\",\"Order\":5},{\"Name\":\"Escaso volumen de inspecciones realizadas\",\"Value\":\"\",\"Guid\":\"912c470d-9f96-4b36-9aed-70ec0b02e6ba\",\"Order\":6},{\"Name\":\"Escasez reuniones/visitas\",\"Value\":\"\",\"Guid\":\"cc6355e7-719e-4886-833a-167db82ad9cb\",\"Order\":7},{\"Name\":\"Resolución de incidencias\",\"Value\":\"\",\"Guid\":\"d7a5343c-8f51-4804-b506-892c9c780418\",\"Order\":8},{\"Name\":\"Tiempos de respuesta servicio movilidad\",\"Value\":\"\",\"Guid\":\"5c3ffd1c-cb2a-488c-b288-297bc4962d09\",\"Order\":9}],\"HasMultipleChoice\":true}},{\"DFormFieldTypeId\":3,\"Guid\":\"2a2dd2a6-d8ff-44b2-a933-ee1507527445\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Soporte Operaciones -Descripción de los hechos por los que el Cliente realiza la reclamación.\",\"Order\":2,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":15000}}],\"Order\":4,\"IsFork\":true,\"ParentId\":\"4\",\"ParentGuid\":\"7b9adc9d-e480-4e4e-8a13-d790578abceb\",\"ForkOrder\":4},{\"Name\":\"Soporte Comercial\",\"Guid\":\"0d9cb6d6-7d3f-4c42-a3e4-3675bc0a3d80\",\"FieldsList\":[{\"DFormFieldTypeId\":6,\"Guid\":\"a0ead2aa-cd5e-404d-a466-2e88b7a0e45b\",\"IsMandatory\":false,\"Label\":\"Soporte Comercial\",\"Order\":3,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Incidencias con la facturación\",\"Value\":\"\",\"Guid\":\"78396f2b-0f6e-4706-91fc-0138e93e48d1\",\"Order\":1},{\"Name\":\"Escasez reuniones/visitas\",\"Value\":\"\",\"Guid\":\"7225e933-4d62-4222-9d5e-7c47e19068a3\",\"Order\":2},{\"Name\":\"No se atienden peticiones\",\"Value\":\"\",\"Guid\":\"628f67e8-5089-4671-8c83-6bd7cdd9d041\",\"Order\":3}],\"HasMultipleChoice\":true}},{\"DFormFieldTypeId\":3,\"Guid\":\"adfee6c2-79f3-41c1-a0ef-0bff6d8f2e6b\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Soporte Comercial - Descripción de los hechos por los que el Cliente realiza la reclamación. \",\"Order\":2,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":15000}}],\"Order\":5,\"IsFork\":true,\"ParentId\":\"4\",\"ParentGuid\":\"7b9adc9d-e480-4e4e-8a13-d790578abceb\",\"ForkOrder\":6},{\"Name\":\"Soporte Tecnología\",\"Guid\":\"a4413ed1-cf3b-4745-ad5b-156bad1a0634\",\"FieldsList\":[{\"DFormFieldTypeId\":6,\"Guid\":\"41b14477-b808-46df-85de-8cbb8b3cf61e\",\"IsMandatory\":false,\"Label\":\"Soporte Tecnología\",\"Order\":3,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Mantenimiento\",\"Value\":\"\",\"Guid\":\"8cd13d19-93bd-45a4-8b0a-dd8a0962cc44\",\"Order\":4,\"ForkGuid\":\"0d9cb6d6-7d3f-4c42-a3e4-3675bc0a3d80\"},{\"Name\":\"Resolución de incidencias\",\"Value\":\"\",\"Guid\":\"f52cdfa5-7577-4470-b574-be5382e84eef\",\"Order\":5},{\"Name\":\"Tiempo de resolución ante incidencias\",\"Value\":\"\",\"Guid\":\"8ee44e37-34f5-498d-8eb8-bf94d491fbbd\",\"Order\":6},{\"Name\":\"Attención Central receptora de Alarmas C.R.A.\",\"Value\":\"\",\"Guid\":\"52a3ea6f-75dd-4bb6-879e-d1228e601ea6\",\"Order\":7}],\"HasMultipleChoice\":true}},{\"DFormFieldTypeId\":3,\"Guid\":\"d5ed7be6-6467-4416-83ca-9ba5dd9f06ff\",\"IsMandatory\":true,\"HelpText\":\"Recuerda que puedes utilizar el micrófono del teclado mediante el cual puedes dictar  las medidas adoptadas\",\"Label\":\"Soporte  tecnología - Descripción de los hechos por los que el Cliente realiza la reclamación. \",\"Order\":2,\"TextBoxField\":{\"HasMultiline\":true,\"MaxLength\":15000}}],\"Order\":6,\"IsFork\":true,\"ParentId\":\"3\",\"ParentGuid\":\"7b9adc9d-e480-4e4e-8a13-d790578abceb\",\"ForkOrder\":4},{\"Name\":\"Valoración de la reunión\",\"Guid\":\"5c345988-7303-4323-b688-891cd12838df\",\"FieldsList\":[{\"DFormFieldTypeId\":6,\"Guid\":\"4642a89a-8561-4085-940e-750a08367f02\",\"IsMandatory\":true,\"Label\":\"¿El clima de la reunión ha sido agradable y libre de tensiones?\",\"Order\":1,\"NotVisibleOnCustomer\":true,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Sí\",\"Value\":\"\",\"IsSelected\":true,\"Guid\":\"22e4bd86-0eb2-4cd0-ad30-4f7f12e05147\",\"Order\":1},{\"Name\":\"No\",\"Value\":\"\",\"Guid\":\"bf239362-493c-40df-9b9d-c1b9d8674efc\",\"Order\":2}]}},{\"DFormFieldTypeId\":6,\"Guid\":\"6d5fe0c1-9967-4c5f-9412-c813cb663119\",\"IsMandatory\":true,\"Label\":\"¿El objetivo u objetivos de la reunión han sido alcanzados?\",\"Order\":2,\"NotVisibleOnCustomer\":true,\"OptionListFieldId\":{\"OptionChoicesList\":[{\"Name\":\"Sí\",\"Value\":\"\",\"Guid\":\"cb360384-1dac-4486-b01d-72b2ebc7793a\",\"Order\":3},{\"Name\":\"No\",\"Value\":\"\",\"IsSelected\":true,\"Guid\":\"b927c78d-08d1-4a52-9824-0fa3ba56b350\",\"Order\":2}]}},{\"DFormFieldTypeId\":12,\"Guid\":\"4ec2c5e4-6009-4ffa-912f-ddbdb78890f4\",\"IsMandatory\":true,\"HelpText\":\"1 Muy bajo / 2 Bajo / 3 Medio / 4 Alto / 5 Muy Alto \",\"Label\":\"Valora tu grado de satisfacción con la reunión mantenida: \",\"Order\":3,\"NotVisibleOnCustomer\":true,\"QualificationField\":{\"Value\":4.0}}],\"Order\":5}]","FORMINSTANCEWEIGHTINGS":"[]"}}
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "string",
+        "optional": true,
+        "field": "POS"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "TENANT_ID"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "ID"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "FORMINSTANCEFIELDS"
+      },
+      {
+        "type": "string",
+        "optional": true,
+        "field": "FORMINSTANCEWEIGHTINGS"
+      }
+    ],
+    "optional": false
+  },
+  "payload": {
+    "POS": "SCN1774004894",
+    "TENANT_ID": "83",
+    "ID": "1",
+    "FORMINSTANCEFIELDS": [
+      {
+        "Name": "¿CUÁNDO Y DÓNDE?",
+        "Guid": "9d79ed29-aa4b-4911-949b-e973d5337d57",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 4,
+            "Guid": "98938461-d206-4397-8cfc-552f43f94e0a",
+            "IsMandatory": false,
+            "Label": "¿CUÁNDO HA OCURRIDO?",
+            "Order": 1,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": true,
+              "IsDate": false,
+              "Value": "2018-12-19T11:08:00Z",
+              "MaxDatetime": "2019-12-31T23:00:00Z"
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "674116bb-2c86-47c1-98e2-834bbc4bda52",
+            "IsMandatory": false,
+            "Label": "¿DÓNDE HA OCURRIDO?",
+            "Order": 2,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Almacén",
+                  "Value": ""
+                },
+                {
+                  "Name": "Aparcamiento",
+                  "Value": ""
+                },
+                {
+                  "Name": "Aseos",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Zona de Acceso Público",
+                  "Value": ""
+                },
+                {
+                  "Name": "Zona de Oficinas",
+                  "Value": ""
+                },
+                {
+                  "Name": "Zona Restringida",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          }
+        ]
+      },
+      {
+        "Name": "¿QUÉ HA PASADO?",
+        "Guid": "5b56d918-ee76-405e-b5bb-901ccd1ab109",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "53a8dcc6-a970-4c0a-8a55-7d585630d3a4",
+            "IsMandatory": false,
+            "Label": "SE HA VISTO AFECTADO:",
+            "Order": 1,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "El Cliente",
+                  "Value": ""
+                },
+                {
+                  "Name": "Personal Ajeno / Terceras Personas",
+                  "Value": ""
+                },
+                {
+                  "Name": "Personal colaborador Externo",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Personal del Cliente",
+                  "Value": ""
+                },
+                {
+                  "Name": "Personal de Prosegur",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "b8a53238-ae65-4a21-97cc-127b129b1492",
+            "IsMandatory": false,
+            "Label": "SE HA SUSTRAÍDO:",
+            "Order": 2,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Bienes del cliente (material, producto, etc.)",
+                  "Value": ""
+                },
+                {
+                  "Name": "Bienes/efectos personales",
+                  "Value": ""
+                },
+                {
+                  "Name": "Dinero / Cartera / Bolso",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Material de Trabajo",
+                  "Value": ""
+                },
+                {
+                  "Name": "Vehículo",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 7,
+            "Guid": "370c59c4-7365-4f60-88ce-e4a1b5625f9a",
+            "IsMandatory": false,
+            "Label": "IMPORTE APROXIMADO DE LO SUSTRAÍDO",
+            "Order": 3,
+            "IsFilled": true,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {
+              "NumberOfDecimals": 2,
+              "Value": 200,
+              "MaxValue": 1000000,
+              "Prompt": "No rellenar si se desconoce."
+            },
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 9,
+            "Guid": "9a55d9ad-94b0-479e-9adb-b45f2c5cdd4e",
+            "IsMandatory": false,
+            "Label": "¿Ha habido consecuencias sobre personas? (agresión / alteración del estado de la salud)",
+            "Order": 4,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "No aplica",
+                  "Value": ""
+                },
+                {
+                  "Name": "Sin lesiones aparentes",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Con lesiones aparentes (sangrado, dificultad al moverse, etc.)",
+                  "Value": ""
+                },
+                {
+                  "Name": "Alteración del estado de la salud (ansiedad, infarto, desorientación, etc.)",
+                  "Value": ""
+                },
+                {
+                  "Name": "Pérdida de consciencia / desfallecimiento",
+                  "Value": ""
+                },
+                {
+                  "Name": "Fallecimiento",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 9,
+            "Guid": "c5a3dfff-df60-43ee-80f5-b8dda20262c4",
+            "IsMandatory": false,
+            "Label": "AUTOR DE LA INCIDENCIA:",
+            "Order": 5,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Sin información",
+                  "Value": ""
+                },
+                {
+                  "Name": "1 Persona",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "2 Personas",
+                  "Value": ""
+                },
+                {
+                  "Name": "Más de 2 personas",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 9,
+            "Guid": "049201b7-b925-4c98-b4d8-15af78bd05a2",
+            "IsMandatory": false,
+            "Label": "DE SEXO:",
+            "Order": 6,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Hombre",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Mujer",
+                  "Value": ""
+                },
+                {
+                  "Name": "Ambos",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 9,
+            "Guid": "6786cec2-194a-4873-8c7f-7178e8aadd37",
+            "IsMandatory": false,
+            "Label": "DE EDAD APROXIMADA:",
+            "Order": 7,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Menor de edad",
+                  "Value": ""
+                },
+                {
+                  "Name": "Mayor de edad",
+                  "Value": "",
+                  "IsSelected": true
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 9,
+            "Guid": "2da63693-ff37-4b6e-bcbd-d89ef7249817",
+            "IsMandatory": false,
+            "Label": "EL AUTOR ES:",
+            "Order": 8,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Ocasional",
+                  "Value": ""
+                },
+                {
+                  "Name": "Reincidente",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Profesional / Banda organizada",
+                  "Value": ""
+                },
+                {
+                  "Name": "Personal Colaborador Externo",
+                  "Value": ""
+                },
+                {
+                  "Name": "Personal del Cliente",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          }
+        ]
+      },
+      {
+        "Name": "¿CÓMO HA PASADO?",
+        "Guid": "c7189a34-4be7-4e55-9e98-54c18febb9b6",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "d1932756-8c8b-4d8e-bf93-fc71fd690d58",
+            "IsMandatory": false,
+            "Label": "EL MODUS OPERANDI HA SIDO:",
+            "Order": 1,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Desconocido",
+                  "Value": ""
+                },
+                {
+                  "Name": "Alicates / Elementos de corte",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Arma blanca",
+                  "Value": ""
+                },
+                {
+                  "Name": "Arma de fuego",
+                  "Value": ""
+                },
+                {
+                  "Name": "Huída por la salida de emergencia",
+                  "Value": ""
+                },
+                {
+                  "Name": "Imanes",
+                  "Value": ""
+                },
+                {
+                  "Name": "Manipulación manual / carterista / tirón de bolso",
+                  "Value": ""
+                },
+                {
+                  "Name": "Objeto contundente",
+                  "Value": ""
+                },
+                {
+                  "Name": "Objeto / instrumento punzante",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "ef165cf7-ca8b-4d07-ae24-30dceb6437ca",
+            "IsMandatory": false,
+            "Label": "EL MEDIO DE OCULTACIÓN HA SIDO:",
+            "Order": 2,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "No aplica",
+                  "Value": ""
+                },
+                {
+                  "Name": "Bandolera / Mochila / bolso",
+                  "Value": ""
+                },
+                {
+                  "Name": "Bolsa de establecimiento comercial",
+                  "Value": ""
+                },
+                {
+                  "Name": "Bolso forrado de aluminio",
+                  "Value": ""
+                },
+                {
+                  "Name": "Carro de bebé",
+                  "Value": ""
+                },
+                {
+                  "Name": "Carro de la compra",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Entre pertenencias",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "45e1fad9-c8c2-495c-b88e-47482b40c935",
+            "IsMandatory": false,
+            "Label": "HA SIDO DETECTADO MEDIANTE:",
+            "Order": 3,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "CCTV",
+                  "Value": ""
+                },
+                {
+                  "Name": "Centro de Control",
+                  "Value": ""
+                },
+                {
+                  "Name": "Control Visual",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Sistemas Anti-hurto / RFID",
+                  "Value": ""
+                },
+                {
+                  "Name": "Aviso de terceras personas",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "cd4ad7e7-be02-4b1a-b118-229f445b62b7",
+            "IsMandatory": false,
+            "Label": "POR:",
+            "Order": 4,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Personal de Prosegur",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Personal del Cliente",
+                  "Value": ""
+                },
+                {
+                  "Name": "Personal Colaborador Externo",
+                  "Value": ""
+                },
+                {
+                  "Name": "Personal Ajeno / Terceras Personas",
+                  "Value": ""
+                }
+              ]
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          }
+        ]
+      },
+      {
+        "Name": "¿A QUIÉN SE HA AVISADO?",
+        "Guid": "331fb9d3-3a2a-4e27-94f4-78a4f36cda22",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 5,
+            "Guid": "117fadf5-e8de-4c64-bbd8-cd10b8abdf83",
+            "IsMandatory": false,
+            "Label": "¿SE HAN AVISADO A LAS ASISTENCIAS?",
+            "Order": 1,
+            "IsFilled": true,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {
+              "Value": true,
+              "LabelTrue": "Sí",
+              "LabelFalse": "No"
+            },
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "a0486624-7d72-471d-a623-ad4f69844137",
+            "IsMandatory": false,
+            "Label": "Si se han avisado, indique cuáles",
+            "Order": 2,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "No aplica",
+                  "Value": ""
+                },
+                {
+                  "Name": "Asistencia sanitaria",
+                  "Value": ""
+                },
+                {
+                  "Name": "Bomberos",
+                  "Value": ""
+                },
+                {
+                  "Name": "Ertzaintza",
+                  "Value": ""
+                },
+                {
+                  "Name": "Guardia Civil",
+                  "Value": ""
+                },
+                {
+                  "Name": "Mossos d'esquadra",
+                  "Value": ""
+                },
+                {
+                  "Name": "Policía Local",
+                  "Value": ""
+                },
+                {
+                  "Name": "Policía Nacional",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Policía Foral de Navarra",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "c7fe7e39-49c3-4ced-bef2-c493f6e45aa9",
+            "IsMandatory": false,
+            "Label": "LAS ASISTENCIAS HAN SIDO AVISADAS POR:",
+            "Order": 3,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Personal Ajeno / Terceras Personas",
+                  "Value": ""
+                },
+                {
+                  "Name": "Personal colaborador Externo",
+                  "Value": ""
+                },
+                {
+                  "Name": "Personal del Cliente",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Personal de Prosegur",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 5,
+            "Guid": "c8580fe5-ccdd-4478-9c33-151c53124f2b",
+            "IsMandatory": false,
+            "Label": "¿SE HA AVISADO AL CGO?",
+            "Order": 4,
+            "IsFilled": true,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {
+              "Value": true,
+              "LabelTrue": "Sí",
+              "LabelFalse": "No"
+            },
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 5,
+            "Guid": "f068086c-6a70-4070-b061-26594aa4a4b2",
+            "IsMandatory": false,
+            "Label": "¿SE AVISA AL CLIENTE?",
+            "Order": 5,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {
+              "LabelTrue": "Sí",
+              "LabelFalse": "No"
+            },
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 3,
+            "Guid": "8cd08121-80b5-4d1c-a9d5-5929197713c1",
+            "IsMandatory": false,
+            "Label": "Si se ha avisado, indica a quién",
+            "Order": 6,
+            "TextBoxField": {
+              "HasMultiline": true,
+              "MaxLength": 400
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          }
+        ]
+      },
+      {
+        "Name": "RESULTADO",
+        "Guid": "3599c5ec-690d-4198-ac02-82f0c440a9bf",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 6,
+            "Guid": "1683931a-4f56-4765-be1f-89100eed60ed",
+            "IsMandatory": false,
+            "Label": "Lista De Opciones",
+            "Order": 1,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": [
+                {
+                  "Name": "Abona el producto y abandona la instalación",
+                  "Value": ""
+                },
+                {
+                  "Name": "A disposición de FFCCS",
+                  "Value": ""
+                },
+                {
+                  "Name": "Denuncia del cliente/establecimiento",
+                  "Value": ""
+                },
+                {
+                  "Name": "Denuncia Prosegur",
+                  "Value": ""
+                },
+                {
+                  "Name": "Desalojo del autor/autores",
+                  "Value": "",
+                  "IsSelected": true
+                },
+                {
+                  "Name": "Huida con recuperación de artículo/os",
+                  "Value": ""
+                },
+                {
+                  "Name": "Huida sin recuperación de artículo/os",
+                  "Value": ""
+                },
+                {
+                  "Name": "Detención",
+                  "Value": ""
+                }
+              ],
+              "HasMultipleChoice": true
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 3,
+            "Guid": "e97e5e66-b9b3-4a3c-82d6-f93b592cba7e",
+            "IsMandatory": false,
+            "Label": "OBSERVACIONES",
+            "Order": 2,
+            "IsFilled": true,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 400,
+              "Value": "Esto es una prueba"
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          },
+          {
+            "DFormFieldTypeId": 3,
+            "Guid": "8f948eb3-9516-4e20-852d-e1216ed6f100",
+            "IsMandatory": false,
+            "Label": "MEDIDAS ADOPTADAS",
+            "Order": 3,
+            "IsFilled": true,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 400,
+              "Value": "Ninguna"
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          }
+        ]
+      },
+      {
+        "Name": "ADJUNTAR ARCHIVO",
+        "Guid": "8fdef39d-ccc9-46a7-b625-8f0f4f88664e",
+        "FieldsList": [
+          {
+            "DFormFieldTypeId": 10,
+            "Guid": "3ea8335a-84c5-4c13-b2a4-4631dd2ac18d",
+            "IsMandatory": false,
+            "Label": "Si quieres, para completar tu informe puedes adjuntar una fotografía y/o archivo. Muchas gracias por tu colaboración y buen servicio!",
+            "Order": 1,
+            "TextBoxField": {
+              "HasMultiline": false,
+              "MaxLength": 0
+            },
+            "NumericFieldId": {},
+            "LogicFieldId": {},
+            "OptionListFieldId": {
+              "OptionChoicesList": []
+            },
+            "DatetimeFieldId": {
+              "IsDatetime": false,
+              "IsDate": false
+            },
+            "TableRecordLines": [],
+            "AttachmentFieldId": {
+              "AttachmentLines": {
+                "AttachmentLineFieldList": []
+              }
+            },
+            "LabelFieldId": {
+              "HasMultiline": false
+            }
+          }
+        ]
+      }
+    ],
+    "FORMINSTANCEWEIGHTINGS": " "
+  }
+}
