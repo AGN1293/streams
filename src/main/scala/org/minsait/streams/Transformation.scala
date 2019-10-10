@@ -54,7 +54,7 @@ object Transformation {
   val dummyJson = JsonResponse(Schema(fields = fieldList))
 
   def formatEvents(json: Option[JsonMessage]): List[String] = {
-    var results: ArrayBuffer[JsonResponse] = ArrayBuffer.empty
+    results = ArrayBuffer.empty
     json match {
       case Some(msg) => {
         logger.debug(s"[OSUSR_DGL_DFORM_I1] Parsing message with id: {${json.get.after.ID}}")
