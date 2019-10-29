@@ -24,7 +24,8 @@ object Transformation {
   var results: ArrayBuffer[JsonResponse] = ArrayBuffer.empty
 
   def jsonToClass(input: String): Option[JsonMessage] = {
-    val inputFormatted = input.replace("\\\\\\\"", "").replace("\"[", "[").replace("]\"", "]").replace("\\", "").replaceAll("[^\u0000-\uFFFF]", "")
+    val inputFormatted = input.replace("\\\\\\\"", "").replace("\"[", "[").replace("]\"", "]").replace("\\", "").replaceAll("[^\u0000-\uFFFF]", "").replace("\"FORMINSTANCEFIELDS\": \" \",", "")
+    println(inputFormatted)
     val decoded = decode[JsonMessage](inputFormatted)
     decoded match {
       case Right(msg) => Some(msg)
